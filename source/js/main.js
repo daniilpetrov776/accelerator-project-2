@@ -2,3 +2,7 @@
 // import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
+import { handleNavMenu } from './burger';
+
+handleNavMenu();
+
