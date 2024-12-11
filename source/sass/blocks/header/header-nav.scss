@@ -14,10 +14,10 @@
 .header-nav__list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 5px;
   display: flex;
   flex-flow: column wrap;
-  gap: 22px;
+  gap: 2px;
 }
 
 .header-nav__item {
@@ -30,11 +30,70 @@
   color: $white;
   text-decoration: none;
   @include apply-styles($mobile-button-big);
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s $smooth;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 10px);
+    height: 1px;
+    background-color: $white  ;
+    left: -5px;
+    bottom: 7px;
+    transform: scaleX(0);
+    transition: transform 0.3s $smooth;
+    transform-origin: left;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 10px);
+    height: calc(100% - 14px);
+    border: solid 1px $white;
+    left: -5px;
+    top: 7px;
+    transform: scaleX(0);
+    transition: transform 0.3s $smooth;
+    transform-origin: left;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  &--disabled {
+    color: $disabled;
+    pointer-events: none;
+    cursor: auto;
+  }
+
+  &:disabled {
+    color: $disabled;
+  }
 }
 
 @media #{$not-mobile} {
   .header-nav {
     margin: 0;
+  }
+
+  .header-nav__list {
+    gap: 6px;
   }
 
   .header-nav__link {
@@ -63,5 +122,32 @@
   .header-nav__link {
     @include apply-styles($desktop-button-input-regular);
     text-transform: none;
+    padding: 20px 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% + 10px);
+      height: 1px;
+      background-color: $white  ;
+      left: -5px;
+      bottom: 17px;
+      transform: scaleX(0);
+      transition: transform 0.3s $smooth;
+      transform-origin: left;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% + 10px);
+      height: calc(100% - 34px);
+      border: solid 1px $white;
+      left: -5px;
+      top: 17px;
+      transform: scaleX(0);
+      transition: transform 0.3s $smooth;
+      transform-origin: left;
+    }
   }
 }

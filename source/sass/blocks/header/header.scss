@@ -13,17 +13,23 @@
   row-gap: 14px;
 }
 
+.header__burger-button {
+  margin: 0 0 0 5px;
+}
+
 .header__logo-wrapper {
   flex-grow: 1;
   display: flex;
   flex-flow: wrap;
   justify-content: flex-end;
+  margin: 0 5px 0 0;
 }
 
 .header__phone {
   color: $white;
   text-decoration: none;
   @include apply-styles($mobile-h6);
+  margin: 0 5px 0 0;
 }
 
 @media #{$not-mobile} {
@@ -38,18 +44,24 @@
     row-gap: 0;
   }
 
+  .header__burger-button {
+    margin: 0;
+  }
+
   .header__logo-wrapper {
     flex-grow: 0;
     width: 226px;
     display: flex;
     flex-flow: wrap;
     place-content: center;
+    margin: 0;
   }
 
   .header__phone {
     width: 226px;
     text-align: right;
     @include apply-styles($tablet-h6);
+    margin: 0;
   }
 }
 
@@ -63,5 +75,6 @@
     width: 157px;
     text-align: right;
     @include apply-styles($desktop-h6);
+    order: 2;
   }
 }
