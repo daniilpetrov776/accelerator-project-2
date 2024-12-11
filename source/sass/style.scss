@@ -1,4 +1,9 @@
-// Vendor
-// ---------------------------------
-
 @import "vendor/normalize";
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/global";
+@import "./common/fonts";
+@import "./common/container";
+@import "./blocks/header/header";
+@import "./blocks/header/burger-button";
+@import "./blocks/header/header-nav";

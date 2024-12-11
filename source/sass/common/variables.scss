@@ -1,0 +1,274 @@
+$tablet-min-width: 768px;
+$tablet-max-width: 1439px;
+$desktop-min-width: 1440px ;
+$mobile-min-width: 320px;
+$mobile-max-width: 767px;
+$mobile-only: "(width <= #{$mobile-max-width})";
+$tablet-only: "(#{$tablet-min-width} <= width <= #{$tablet-max-width})";
+$desktop-only: "(width >= #{$desktop-min-width})";
+$not-mobile: "(width >= #{$tablet-min-width})";
+$not-desktop: "(width <= #{$desktop-min-width})";
+$smooth: cubic-bezier(0.4, 0, 0.4, 1);
+$primary: #2d383f;
+$additional: #0266c1;
+$active: #1c3374;
+$white: #ffffff;
+$disabled: #999999;
+
+$desktop-h1: (
+  font-size: 77px,
+  line-height: 77px,
+  font-weight: 800,
+);
+$tablet-h1: (
+  font-size: 56px,
+  line-height: 56px,
+  font-weight: 800,
+);
+$mobile-h1: (
+  font-size: 30px,
+  line-height: 30px,
+  font-weight: 800,
+);
+
+$desktop-h2: (
+  font-size: 55px,
+  line-height: 55px,
+  font-weight: 800,
+);
+$tablet-h2: (
+  font-size: 40px,
+  line-height: 40px,
+  font-weight: 800,
+);
+$mobile-h2: (
+  font-size: 26px,
+  line-height: 26px,
+  font-weight: 800,
+);
+
+$desktop-h3: (
+  font-size: 35px,
+  line-height: 35px,
+  font-weight: 800,
+);
+$tablet-h3: (
+  font-size: 25px,
+  line-height: 25px,
+  font-weight: 800,
+);
+$mobile-h3: (
+  font-size: 22px,
+  line-height: 22px,
+  font-weight: 800,
+);
+
+$desktop-h4: (
+  font-size: 24px,
+  line-height: 28px,
+  font-weight: 700,
+);
+$tablet-h4: (
+  font-size: 24px,
+  line-height: 28px,
+  font-weight: 700,
+);
+$mobile-h4: (
+  font-size: 20px,
+  line-height: 24px,
+  font-weight: 700,
+);
+
+$desktop-h5: (
+  font-size: 21px,
+  line-height: 21px,
+  font-weight: 700,
+);
+$tablet-h5: (
+  font-size: 18px,
+  line-height: 18px,
+  font-weight: 700,
+);
+$mobile-h5: (
+  font-size: 16px,
+  line-height: 16px,
+  font-weight: 700,
+);
+
+$desktop-h6: (
+  font-size: 18px,
+  line-height: 18px,
+  font-weight: 600,
+);
+$tablet-h6: (
+  font-size: 16px,
+  line-height: 16px,
+  font-weight: 700,
+);
+$mobile-h6: (
+  font-size: 14px,
+  line-height: 14px,
+  font-weight: 700,
+);
+
+$h7: (
+  font-size: 14px,
+  line-height: 16px,
+  font-weight: 700,
+);
+
+$desktop-text-big: (
+  font-size: 17px,
+  line-height: 24px,
+  font-weight: 400,
+);
+$tablet-text-big: (
+  font-size: 17px,
+  line-height: 24px,
+  font-weight: 400,
+);
+$mobile-text-big: (
+  font-size: 15px,
+  line-height: 20px,
+  font-weight: 400,
+);
+
+$desktop-text-regular: (
+  font-size: 16px,
+  line-height: 24px,
+  font-weight: 400,
+);
+$tablet-text-regular: (
+  font-size: 16px,
+  line-height: 24px,
+  font-weight: 400,
+);
+$mobile-text-regular: (
+  font-size: 14px,
+  line-height: 20px,
+  font-weight: 400,
+);
+
+$desktop-text-small: (
+  font-size: 14px,
+  line-height: 22px,
+  font-weight: 400,
+);
+$tablet-text-small: (
+  font-size: 14px,
+  line-height: 22px,
+  font-weight: 400,
+);
+$mobile-text-small: (
+  font-size: 12px,
+  line-height: 18px,
+  font-weight: 400,
+);
+
+$text-xsmal: (
+  font-size: 12px,
+  line-height: 16px,
+  font-weight: 400,
+);
+
+$desktop-caption-big: (
+  font-size: 13px,
+  line-height: 13px,
+  font-weight: 700,
+);
+$tablet-caption-big: (
+  font-size: 13px,
+  line-height: 13px,
+  font-weight: 700,
+);
+$mobile-caption-big: (
+  font-size: 12px,
+  line-height: 12px,
+  font-weight: 700,
+);
+
+$desktop-caption-medium: (
+  font-size: 12px,
+  line-height: 12px,
+  font-weight: 500,
+);
+$tablet-caption-medium: (
+  font-size: 12px,
+  line-height: 12px,
+  font-weight: 500,
+);
+$mobile-caption-medium: (
+  font-size: 12px,
+  line-height: 12px,
+  font-weight: 500,
+);
+
+$desktop-caption-small: (
+  font-size: 12px,
+  line-height: 12px,
+  font-weight: 300,
+);
+$tablet-caption-small: (
+  font-size: 12px,
+  line-height: 12px,
+  font-weight: 300,
+);
+$mobile-caption-small: (
+  font-size: 12px,
+  line-height: 12px,
+  font-weight: 300,
+);
+
+$desktop-button-big: (
+  font-size: 16px,
+  line-height: 16px,
+  font-weight: 700,
+  text-transform: uppercase,
+  letter-spacing: 0.04em,
+);
+$tablet-button-big: (
+  font-size: 16px,
+  line-height: 16px,
+  font-weight: 700,
+  text-transform: uppercase,
+  letter-spacing: 0.04em,
+);
+$mobile-button-big: (
+  font-size: 14px,
+  line-height: 14px,
+  font-weight: 700,
+  text-transform: uppercase,
+  letter-spacing: 0.04em,
+);
+
+$desktop-button-medium: (
+  font-size: 16px,
+  line-height: 16px,
+  font-weight: 500,
+);
+$tablet-button-medium: (
+  font-size: 16px,
+  line-height: 16px,
+  font-weight: 500,
+);
+$mobile-button-medium: (
+  font-size: 14px,
+  line-height: 14px,
+  font-weight: 500,
+);
+
+$desktop-button-input-regular: (
+  font-size: 16px,
+  line-height: 16px,
+  font-weight: 400,
+);
+$tablet-button-input-regular: (
+  font-size: 14px,
+  line-height: 14px,
+  font-weight: 400,
+);
+$mobile-button-input-regular: (
+  font-size: 14px,
+  line-height: 14px,
+  font-weight: 400,
+);

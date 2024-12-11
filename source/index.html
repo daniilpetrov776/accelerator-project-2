@@ -8,12 +8,42 @@
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
+  <body class="page">
+    <header class="page__header header" data-test="header">
+      <section class="container container--thicker header__wrapper">
+        <div class="header__burger-button burger-button" role="button" tabindex="0" aria-label="Меню Навигации.">
+          <div class="burger-button__contents"></div>
+        </div>
+        <nav class="header__header-nav header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Туры</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Обучение</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">О нас</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Отзывы</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Фотографии</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__logo-wrapper">
+          <img class="header__logo" src="./img/logo/logo-light.svg" alt="Логотип туристической компании.">
+        </div>
+        <a class="header__phone" href="tel:+78000000000" tabindex="0">8 800 000-00-00</a>
+      </section>
+    </header>
+    <main></main>
+    <footer></footer>
     <!-- примеры требуемых атрибутов data-test="*" -->
     <div data-test="header">header</div>
     <div data-test="hero">hero</div>
