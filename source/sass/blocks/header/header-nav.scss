@@ -9,6 +9,11 @@
   &--is-open {
     max-height: 1000px;
   }
+
+  &--is-closed {
+    max-height: 0;
+    margin: 0;
+  }
 }
 
 .header-nav__list {

@@ -1,0 +1,57 @@
+.hero {
+  min-height: 568px;
+  background-color: #77a9d3 ;
+  position: relative;
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2d383f99;
+  z-index: 5;
+  transition: opacity 0.3s $smooth;
+  opacity: 0;
+}
+
+.hero.hero--menu-open .hero__overlay {
+
+  opacity: 1;
+}
+
+.hero__slide {
+  position: relative;
+  z-index: 0;
+}
+
+.hero__picture-wrapper {
+  position: absolute;
+  top: 0;
+
+  &::before {
+    z-index: 0;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(143deg, #0F142954 0%, #0F142900 100%);
+  }
+}
+
+.hero__slide-content {
+  z-index: 2;
+}
+
+@media #{$not-mobile} {
+  .hero {
+    min-height: 1034px;
+  }
+}
+
+@media #{$desktop-only} {
+  .hero {
+    min-height: 800px;
+  }
+}

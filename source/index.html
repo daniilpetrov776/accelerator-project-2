@@ -11,10 +11,11 @@
   <body class="page">
     <header class="page__header header" data-test="header">
       <section class="container container--thicker header__wrapper">
+        <h2 class="visually-hidden">Навигация.</h2>
         <div class="header__burger-button burger-button" role="button" tabindex="0" aria-label="Меню Навигации.">
           <div class="burger-button__contents"></div>
         </div>
-        <nav class="header__header-nav header-nav">
+        <nav class="header__header-nav header-nav header-nav--is-closed">
           <ul class="header-nav__list">
             <li class="header-nav__item">
               <a class="header-nav__link" href="#">Туры</a>
@@ -42,10 +43,39 @@
         <a class="header__phone" href="tel:+78000000000" tabindex="0">8 800 000-00-00</a>
       </section>
     </header>
-    <main></main>
+    <main class="page__main main">
+      <section class="main__hero hero" data-test="hero">
+        <h2 class="visually-hidden">Наши лучшие туры.</h2>
+        <div class="hero__overlay"></div>
+        <h1 class="visually-hidden">Туристические походы в горы.</h1>
+        <div class="container container--full-width hero__wrapper">
+          <div class="hero__filter"></div>
+          <div class="hero__swiper swiper">
+            <div class="hero__swiper-wrapper  swiper-wrapper">
+              <div class="swiper-slide hero__slide">
+                <div class="hero__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/hero/hero-1-desktop@1x.webp, ./img/hero/hero-1-desktop@2x.webp 2x" type="image/webp" width="1440" height="800">
+                    <source media="(min-width: 1440px)" srcset="./img/hero/hero-1-desktop@1x.jpg, ./img/hero/hero-1-desktop@2x.jpg 2x" type="image/jpeg" width="1440" height="800">
+                    <source media="(min-width: 768px)" srcset="./img/hero/hero-1-tablet@1x.webp, ./img/hero/hero-1-tablet@2x.webp 2x" type="image/webp" width="768" height="1034">
+                    <source media="(min-width: 768px)" srcset="./img/hero/hero-1-tablet@1x.jpg, ./img/hero/hero-1-tablet@2x.jpg 2x" type="image/jpeg" width="768" height="1034">
+                    <source media="(min-width: 320px)" srcset="./img/hero/hero-1-mobile@1x.webp, ./img/hero/hero-1-mobile@2x.webp 2x" type="image/webp" width="320" height="568">
+                    <img class="hero__picture" src="./img/hero/hero-1-mobile@1x.jpg" srcset="./img/hero/hero-1-mobile@2x.jpg 2x" width="320" height="568" alt="Вершины Кавказа.">
+                  </picture>
+                </div>
+                <div class="hero__slide-content">
+                  <p class="hero__slide-title">Захватывающие вершины Кавказа</p>
+                  <p class="hero__slide-title">В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                  <button class="hero__slide-button button">Смотреть тур</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
     <div data-test="hero">hero</div>
     <div data-test="tours">tours</div>
     <div data-test="training">training</div>
