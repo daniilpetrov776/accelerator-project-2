@@ -6,8 +6,10 @@ import './const';
 import { updateHeroState } from './hero';
 import { handleNavMenu } from './header';
 import { blockDisabledElements } from './disable';
+import { heroSwiper } from './swiper';
 
 updateHeroState();
 handleNavMenu();
 blockDisabledElements();
+heroSwiper.init();
 

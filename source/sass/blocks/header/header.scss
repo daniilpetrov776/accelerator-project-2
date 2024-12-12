@@ -38,6 +38,32 @@
   text-decoration: none;
   @include apply-styles($mobile-h6);
   margin: 0 5px 0 0;
+  transition: color 0.3s $smooth;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $primary;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  &--disabled {
+    cursor: auto;
+    pointer-events: none;
+    color: $disabled;
+  }
+
+  &:disabled {
+    color: $disabled;
+    cursor: auto;
+    pointer-events: none;
+  }
 }
 
 @media #{$not-mobile} {
@@ -68,7 +94,9 @@
   .header__phone {
     width: 226px;
     text-align: right;
+
     @include apply-styles($tablet-h6);
+
     margin: 0;
   }
 }
@@ -88,7 +116,9 @@
   .header__phone {
     width: 157px;
     text-align: right;
+
     @include apply-styles($desktop-h6);
+
     order: 2;
   }
 }

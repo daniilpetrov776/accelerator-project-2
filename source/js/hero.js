@@ -4,7 +4,7 @@ const setHeaderOffset = () => {
   if (header && hero) {
     const headerHeight = header.offsetHeight;
     header.classList.add('header--fixed');
-    hero.style.paddingTop = `${headerHeight}px`;
+    hero.style.marginTop = `${headerHeight}px`;
   }
 };
 
