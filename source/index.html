@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifetour</title>
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Light.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
     <link rel="stylesheet" href="sass/style.scss">
   </head>
 
@@ -13,9 +19,9 @@
     <header class="page__header header" data-test="header">
       <section class="container container--thicker header__wrapper">
         <h2 class="visually-hidden">Навигация.</h2>
-        <div class="header__burger-button burger-button" tabindex="0" aria-label="Меню Навигации.">
-          <div class="burger-button__contents"></div>
-        </div>
+        <button class="header__burger-button burger-button" type="button" tabindex="0" aria-label="Меню Навигации.">
+          <span class="burger-button__contents"></span>
+        </button>
         <nav class="header__header-nav header-nav header-nav--is-closed">
           <ul class="header-nav__list">
             <li class="header-nav__item">
@@ -143,12 +149,206 @@
         <div class="container tours__wrapper">
           <div class="tours__tours-header slider-header">
             <div class="slider-header__title-wrapper">
-              <h2 class="slider-header__title">Ближайшие туры</h2>
+              <h2 class="slider-header__title section-title">Ближайшие туры</h2>
             </div>
-            <div class="slider-header__navigation swiper-navigation swiper-navigation--tours"></div>
+            <div class="slider-header__navigation swiper-navigation swiper-navigation--tours">
+                <button class="slider-header__swiper-button--prev slider-header__swiper-button swiper-button--prev swiper-button-prev--tours swiper-button" tabindex="0" type="button">
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                </button>
+                <button class="slider-header__swiper-button--next slider-header__swiper-button swiper-button--next swiper-button-next--tours swiper-button" tabindex="0" type="button">
+                  <span class="visually-hidden">Следующий слайд.</span>
+                </button>
+            </div>
           </div>
           <div class="tours__spiwer swiper2">
-            <div></div>
+            <div class="tours__swiper-wrapper swiper-wrapper">
+              <div class="tours__tours-slide tours-slide swiper-slide">
+                <div class="tours-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/tours/tour-1-desktop@1x.webp, ./img/tours/tour-1-desktop@2x.webp 2x" type="image/webp" width="380" height="416">
+                    <source media="(min-width: 1440px)" srcset="./img/tours/tour-1-desktop@1x.jpg, ./img/tours/tour-1-desktop@2x.jpg 2x" type="image/jpeg" width="380" height="416">
+                    <source media="(min-width: 768px)" srcset="./img/tours/tour-1-tablet@2x.webp, ./img/tours/tour-1-tablet@2x.webp 2x" type="image/webp" width="330" height="416">
+                    <source media="(min-width: 768px)" srcset="./img/tours/tour-1-tablet@1x.jpg, ./img/tours/tour-1-tablet@2x.jpg 2x" type="image/jpeg" width="330" height="416">
+                    <source media="(min-width: 320px)" srcset="./img/tours/tour-1-mobile@1x.webp, ./img/tours/tour-1-mobile@2x.webp 2x" type="image/webp" width="290" height="416">
+                    <img class="tours-slide__picture" src="./img/tours/tour-1-mobile@1x.jpg" srcset="./img/tours/tour-1-mobile@2x.jpg 2x" width="290" height="416" alt="Вершины Эльбруса.">
+                  </picture>
+                </div>
+                <div class="tours-slide__content-wrapper">
+                  <div class="tours-slide__header">
+                    <div class="tours-slide__location">
+                      <p class="tours-slide__location-text">Кавказ</p>
+                    </div>
+                    <ul class="tours-slide__duration-list">
+                      <li class="tours-slide__duration-item tours-slide__duration-item--days">4 дня</li>
+                      <li class="tours-slide__duration-item tours-slide__duration-item--nights">3 ночи</li>
+                    </ul>
+                  </div>
+                  <h3 class="tours__slide-title">Путешествие
+                    вокруг Эльбруса</h3>
+                  <ul class="tours-slide__info-list">
+                    <li class="tours-slide__info-item">
+                      <p class="tours-slide__info-heading">Сложность:</p>
+                      <div class="tours-slide__rating">
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star tours-slide__star--empty"></span>
+                      </div>
+                    </li>
+                    <li class="tours-slide__info-item tours-slide__info-item--wider">
+                      <p class="tours-slide__info-heading">Даты набора:</p>
+                      <p class="tours-slide__info-description">12.06–19.06</p>
+                    </li>
+                    <li class="tours-slide__info-item">
+                      <p class="tours-slide__info-heading">Группа:</p>
+                      <p class="tours-slide__info-description">до 15 чел.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tours__tours-slide tours-slide swiper-slide">
+                <div class="tours-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/tours/tour-1-desktop@1x.webp, ./img/tours/tour-1-desktop@2x.webp 2x" type="image/webp" width="380" height="416">
+                    <source media="(min-width: 1440px)" srcset="./img/tours/tour-1-desktop@1x.jpg, ./img/tours/tour-1-desktop@2x.jpg 2x" type="image/jpeg" width="380" height="416">
+                    <source media="(min-width: 768px)" srcset="./img/tours/tour-1-tablet@2x.webp, ./img/tours/tour-1-tablet@2x.webp 2x" type="image/webp" width="330" height="416">
+                    <source media="(min-width: 768px)" srcset="./img/tours/tour-1-tablet@1x.jpg, ./img/tours/tour-1-tablet@2x.jpg 2x" type="image/jpeg" width="330" height="416">
+                    <source media="(min-width: 320px)" srcset="./img/tours/tour-1-mobile@1x.webp, ./img/tours/tour-1-mobile@2x.webp 2x" type="image/webp" width="290" height="416">
+                    <img class="tours-slide__picture" src="./img/tours/tour-1-mobile@1x.jpg" srcset="./img/tours/tour-1-mobile@2x.jpg 2x" width="290" height="416" alt="Вершины Эльбруса.">
+                  </picture>
+                </div>
+                <div class="tours-slide__content-wrapper">
+                  <div class="tours-slide__header">
+                    <div class="tours-slide__location">
+                      <p class="tours-slide__location-text">Кавказ</p>
+                    </div>
+                    <ul class="tours-slide__duration-list">
+                      <li class="tours-slide__duration-item tours-slide__duration-item--days">4 дня</li>
+                      <li class="tours-slide__duration-item tours-slide__duration-item--nights">3 ночи</li>
+                    </ul>
+                  </div>
+                  <h3 class="tours__slide-title">Путешествие
+                    вокруг Эльбруса</h3>
+                  <ul class="tours-slide__info-list">
+                    <li class="tours-slide__info-item">
+                      <p class="tours-slide__info-heading">Сложность:</p>
+                      <div class="tours-slide__rating">
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star tours-slide__star--empty"></span>
+                      </div>
+                    </li>
+                    <li class="tours-slide__info-item tours-slide__info-item--wider">
+                      <p class="tours-slide__info-heading">Даты набора:</p>
+                      <p class="tours-slide__info-description">12.06–19.06</p>
+                    </li>
+                    <li class="tours-slide__info-item">
+                      <p class="tours-slide__info-heading">Группа:</p>
+                      <p class="tours-slide__info-description">до 15 чел.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tours__tours-slide tours-slide swiper-slide">
+                <div class="tours-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/tours/tour-1-desktop@1x.webp, ./img/tours/tour-1-desktop@2x.webp 2x" type="image/webp" width="380" height="416">
+                    <source media="(min-width: 1440px)" srcset="./img/tours/tour-1-desktop@1x.jpg, ./img/tours/tour-1-desktop@2x.jpg 2x" type="image/jpeg" width="380" height="416">
+                    <source media="(min-width: 768px)" srcset="./img/tours/tour-1-tablet@2x.webp, ./img/tours/tour-1-tablet@2x.webp 2x" type="image/webp" width="330" height="416">
+                    <source media="(min-width: 768px)" srcset="./img/tours/tour-1-tablet@1x.jpg, ./img/tours/tour-1-tablet@2x.jpg 2x" type="image/jpeg" width="330" height="416">
+                    <source media="(min-width: 320px)" srcset="./img/tours/tour-1-mobile@1x.webp, ./img/tours/tour-1-mobile@2x.webp 2x" type="image/webp" width="290" height="416">
+                    <img class="tours-slide__picture" src="./img/tours/tour-1-mobile@1x.jpg" srcset="./img/tours/tour-1-mobile@2x.jpg 2x" width="290" height="416" alt="Вершины Эльбруса.">
+                  </picture>
+                </div>
+                <div class="tours-slide__content-wrapper">
+                  <div class="tours-slide__header">
+                    <div class="tours-slide__location">
+                      <p class="tours-slide__location-text">Кавказ</p>
+                    </div>
+                    <ul class="tours-slide__duration-list">
+                      <li class="tours-slide__duration-item tours-slide__duration-item--days">4 дня</li>
+                      <li class="tours-slide__duration-item tours-slide__duration-item--nights">3 ночи</li>
+                    </ul>
+                  </div>
+                  <h3 class="tours__slide-title">Путешествие
+                    вокруг Эльбруса</h3>
+                  <ul class="tours-slide__info-list">
+                    <li class="tours-slide__info-item">
+                      <p class="tours-slide__info-heading">Сложность:</p>
+                      <div class="tours-slide__rating">
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star tours-slide__star--empty"></span>
+                      </div>
+                    </li>
+                    <li class="tours-slide__info-item tours-slide__info-item--wider">
+                      <p class="tours-slide__info-heading">Даты набора:</p>
+                      <p class="tours-slide__info-description">12.06–19.06</p>
+                    </li>
+                    <li class="tours-slide__info-item">
+                      <p class="tours-slide__info-heading">Группа:</p>
+                      <p class="tours-slide__info-description">до 15 чел.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tours__tours-slide tours-slide swiper-slide">
+                <div class="tours-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/tours/tour-1-desktop@1x.webp, ./img/tours/tour-1-desktop@2x.webp 2x" type="image/webp" width="380" height="416">
+                    <source media="(min-width: 1440px)" srcset="./img/tours/tour-1-desktop@1x.jpg, ./img/tours/tour-1-desktop@2x.jpg 2x" type="image/jpeg" width="380" height="416">
+                    <source media="(min-width: 768px)" srcset="./img/tours/tour-1-tablet@2x.webp, ./img/tours/tour-1-tablet@2x.webp 2x" type="image/webp" width="330" height="416">
+                    <source media="(min-width: 768px)" srcset="./img/tours/tour-1-tablet@1x.jpg, ./img/tours/tour-1-tablet@2x.jpg 2x" type="image/jpeg" width="330" height="416">
+                    <source media="(min-width: 320px)" srcset="./img/tours/tour-1-mobile@1x.webp, ./img/tours/tour-1-mobile@2x.webp 2x" type="image/webp" width="290" height="416">
+                    <img class="tours-slide__picture" src="./img/tours/tour-1-mobile@1x.jpg" srcset="./img/tours/tour-1-mobile@2x.jpg 2x" width="290" height="416" alt="Вершины Эльбруса.">
+                  </picture>
+                </div>
+                <div class="tours-slide__content-wrapper">
+                  <div class="tours-slide__header">
+                    <div class="tours-slide__location">
+                      <p class="tours-slide__location-text">Кавказ</p>
+                    </div>
+                    <ul class="tours-slide__duration-list">
+                      <li class="tours-slide__duration-item tours-slide__duration-item--days">4 дня</li>
+                      <li class="tours-slide__duration-item tours-slide__duration-item--nights">3 ночи</li>
+                    </ul>
+                  </div>
+                  <h3 class="tours__slide-title">Путешествие
+                    вокруг Эльбруса</h3>
+                  <ul class="tours-slide__info-list">
+                    <li class="tours-slide__info-item">
+                      <p class="tours-slide__info-heading">Сложность:</p>
+                      <div class="tours-slide__rating">
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star"></span>
+                        <span class="tours-slide__star tours-slide__star--empty"></span>
+                      </div>
+                    </li>
+                    <li class="tours-slide__info-item tours-slide__info-item--wider">
+                      <p class="tours-slide__info-heading">Даты набора:</p>
+                      <p class="tours-slide__info-description">12.06–19.06</p>
+                    </li>
+                    <li class="tours-slide__info-item">
+                      <p class="tours-slide__info-heading">Группа:</p>
+                      <p class="tours-slide__info-description">до 15 чел.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tours__full-width-link full-width-link">
+            <a class="full-width-link__link" href="#">
+              <span class="full-width-link__content">Показать все туры</span>
+              <span class="full-width-link__arrow"></span>
+            </a>
           </div>
         </div>
       </section>

@@ -1,0 +1,18 @@
+.section-title {
+  @include apply-styles($mobile-h3);
+  margin: 0;
+}
+
+@media #{$not-mobile} {
+  .section-title {
+    @include apply-styles($tablet-h3);
+    padding: 0 0 10px 0
+  }
+}
+
+@media #{$desktop-only} {
+  .section-title {
+    @include apply-styles($desktop-h3);
+    padding: 0;
+  }
+}

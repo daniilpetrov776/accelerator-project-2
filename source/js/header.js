@@ -35,6 +35,14 @@ const unblockScroll = () => {
   document.body.style.overflow = 'auto';
 };
 
+const setOverlay = () => {
+  hero.classList.add('hero--menu-open');
+};
+
+const removeOverlay = () => {
+  hero.classList.remove('hero--menu-open');
+};
+
 const closeMenu = () => {
   navMenu.classList.remove('header-nav--is-open');
   navMenu.classList.add('header-nav--is-closed');
@@ -42,6 +50,7 @@ const closeMenu = () => {
   navMenu.style.marginBottom = 0;
   navMenu.style.marginTop = 0;
   unblockScroll();
+  removeOverlay();
 };
 
 const openMenu = () => {
@@ -51,15 +60,6 @@ const openMenu = () => {
   navMenu.style.marginBottom = getMarginBottom();
   navMenu.style.marginTop = getMarginTop();
   blockScroll();
-};
-
-
-const setOverlay = () => {
-  hero.classList.add('hero--menu-open');
-};
-
-const removeOverlay = () => {
-  hero.classList.remove('hero--menu-open');
 };
 
 const burgerButtonClickHndler = () => {
@@ -80,10 +80,7 @@ const burgerButtonClickHndler = () => {
 const handleMenuLinkClick = () => {
   burgerButton.classList.remove('burger-button--is-open');
   burgerButton.classList.add('burger-button--is-closed');
-  navMenu.classList.remove('header-nav--is-open');
-  navMenu.style.maxHeight = 0;
-  navMenu.style.marginBottom = 0;
-  unblockScroll();
+  closeMenu();
 };
 
 export const handleNavMenu = () => {

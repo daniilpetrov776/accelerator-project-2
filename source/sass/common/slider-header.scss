@@ -1,0 +1,23 @@
+.slider-header {
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.slider-header__navigation {
+  min-width: 78px;
+  height: 35px;
+  position: static;
+  display: flex;
+  flex-flow: wrap;
+  gap: 4px;
+  // align-items: ;
+}
+
+@media #{$not-mobile} {
+  .slider-header {
+    align-items: flex-end;
+  }
+}

@@ -66,3 +66,42 @@ function togglePaginationClickable () {
     });
   }
 }
+
+export const toursSwiper = new Swiper('.swiper2', {
+  direction: 'horizontal',
+  init: false,
+  loop: false,
+  simulateTouch: false,
+  keyboard: {
+    enabled: false,
+  },
+  // on: {
+  //   init: function() {
+  //     changeStandartActivePaginationClass('hero__swiper-pagination-bullet--active');
+  //     togglePaginationClickable();
+  //   },
+  //   slideChange: function() {
+  //     changeStandartActivePaginationClass('hero__swiper-pagination-bullet--active');
+
+  //     updateBackgroundColor(this);
+  //   },
+  // },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 18
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-button-next--tours',
+    prevEl: '.swiper-button-prev--tours',
+  },
+});

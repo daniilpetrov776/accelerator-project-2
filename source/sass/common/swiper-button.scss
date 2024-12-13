@@ -1,0 +1,38 @@
+.swiper-button {
+  all: unset;
+  width: 37px;
+  height: 35px;
+  background: #0266C1;
+  border: none;
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 13px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    transition: background 0.3s $smooth;
+  }
+
+  &--next::after {
+    mask: url("/__spritemap#sprite-pointer-right-view") center center no-repeat;
+  }
+
+  &--prev::after {
+    mask: url("/__spritemap#sprite-pointer-left-view") center center no-repeat;
+  }
+
+  &:disabled {
+    background-color: $disabled;
+    opacity: 1;
+    pointer-events: none;
+    cursor: auto;
+  }
+}
