@@ -2,7 +2,15 @@
   background-color: $additional;
   min-height: 100px;
   color: $white;
-  padding: 15px 0;
+  padding: 15px 0 1px;
+
+  &--fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
 }
 
 .header__wrapper {
@@ -30,6 +38,32 @@
   text-decoration: none;
   @include apply-styles($mobile-h6);
   margin: 0 5px 0 0;
+  transition: color 0.3s $smooth;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $primary;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  &--disabled {
+    cursor: auto;
+    pointer-events: none;
+    color: $disabled;
+  }
+
+  &:disabled {
+    color: $disabled;
+    cursor: auto;
+    pointer-events: none;
+  }
 }
 
 @media #{$not-mobile} {
@@ -60,12 +94,20 @@
   .header__phone {
     width: 226px;
     text-align: right;
+
     @include apply-styles($tablet-h6);
+
     margin: 0;
   }
 }
 
 @media #{$desktop-only} {
+  .header {
+    min-height: 126px;
+    display: flex;
+    align-items: center;
+  }
+
   .header__logo-wrapper {
     order: -1;
     width: 142px;
@@ -74,7 +116,9 @@
   .header__phone {
     width: 157px;
     text-align: right;
+
     @include apply-styles($desktop-h6);
+
     order: 2;
   }
 }

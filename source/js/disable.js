@@ -13,5 +13,7 @@ const blockDisabledElementsBySelector = (selector, disabledClass) => {
 
 export const blockDisabledElements = () => {
   blockDisabledElementsBySelector('.header-nav__link', 'header-nav__link--disabled');
+  blockDisabledElementsBySelector('.header__phone', 'header__phone--disabled');
+  blockDisabledElementsBySelector('.button', 'button--disabled');
 };
 
