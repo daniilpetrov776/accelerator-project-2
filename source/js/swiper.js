@@ -75,33 +75,29 @@ export const toursSwiper = new Swiper('.swiper2', {
   keyboard: {
     enabled: false,
   },
-  // on: {
-  //   init: function() {
-  //     changeStandartActivePaginationClass('hero__swiper-pagination-bullet--active');
-  //     togglePaginationClickable();
-  //   },
-  //   slideChange: function() {
-  //     changeStandartActivePaginationClass('hero__swiper-pagination-bullet--active');
 
-  //     updateBackgroundColor(this);
-  //   },
-  // },
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 10
+      spaceBetween: 10,
+      navigation: false,
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 18
+      spaceBetween: 18,
+      navigation: {
+        nextEl: '.swiper-button-next--tours',
+        prevEl: '.swiper-button-prev--tours',
+      },
     },
     1440: {
       slidesPerView: 3,
-      spaceBetween: 30
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next--tours',
+        prevEl: '.swiper-button-prev--tours',
+      },
     }
   },
-  navigation: {
-    nextEl: '.swiper-button-next--tours',
-    prevEl: '.swiper-button-prev--tours',
-  },
+
 });

@@ -1,13 +1,40 @@
 .swiper-button {
   all: unset;
-  width: 37px;
-  height: 35px;
+  width: 35px;
+  height: 33px;
   background: #0266C1;
-  border: none;
+  border: solid 1px transparent;
   position: relative;
   display: block;
   cursor: pointer;
+  transition: border 0.3s $smooth, background 0.3s $smooth;
 
+  &:hover {
+    border-color: #1C3374;
+    background: $white;
+  }
+
+  &:hover::after {
+    background: #1C3374;
+  }
+
+  &:focus-visible {
+    border-color: transparent;
+    background: $white;
+  }
+
+  &:focus-visible::after {
+    background: #1C3374;
+  }
+
+  &:active {
+    border-color: $active;
+    background: $active;
+  }
+
+  &:active::after {
+    background: $white;
+  }
 
   &::after {
     position: absolute;

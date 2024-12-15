@@ -1,5 +1,6 @@
 .tours {
-  min-height: 595px
+  min-height: 595px;
+  padding: 20px 0;
 }
 
 .tours__wrapper {
@@ -25,7 +26,12 @@
 
 @media #{$not-mobile} {
   .tours {
-    min-height: 637px
+    min-height: 637px;
+    width: 100%;
+    padding: 40px 0;
+
+    overflow: visible;
+    position: relative;
   }
 
   .tours__spiwer {
@@ -39,7 +45,8 @@
 
 @media #{$desktop-only} {
   .tours {
-    min-height: 813px
+    min-height: 813px;
+    padding: 100px 0;
   }
 
   .tours__wrapper {

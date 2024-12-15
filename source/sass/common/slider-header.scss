@@ -4,20 +4,26 @@
   align-items: center;
   flex-flow: wrap;
   justify-content: space-between;
+  gap: 5px;
 }
 
 .slider-header__navigation {
   min-width: 78px;
   height: 35px;
   position: static;
-  display: flex;
+  display: none;
   flex-flow: wrap;
   gap: 4px;
-  // align-items: ;
 }
 
 @media #{$not-mobile} {
   .slider-header {
     align-items: flex-end;
   }
+
+  .slider-header__navigation {
+    display: flex;
+    justify-content: flex-end;
+  }
+
 }

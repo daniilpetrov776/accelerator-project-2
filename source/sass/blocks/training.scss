@@ -1,0 +1,15 @@
+.training {
+  min-height: 946px;
+}
+
+@media #{$not-mobile} {
+  .training {
+    min-height: 1050px;
+  }
+}
+
+@media #{$desktop-only} {
+  .training {
+    min-height: 889px;
+  }
+}
