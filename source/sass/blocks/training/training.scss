@@ -2,6 +2,11 @@
   min-height: 946px;
 }
 
+.training__text-wrapper p{
+  @include apply-styles($mobile-text-regular);
+  width: 290px;
+}
+
 @media #{$not-mobile} {
   .training {
     min-height: 1050px;

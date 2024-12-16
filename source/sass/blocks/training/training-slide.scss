@@ -1,0 +1,10 @@
+.training-slide__content-wrapper {
+  h5 {
+    @include apply-styles($h7);
+  }
+}
+
+
+.training-slide__text {
+  @include apply-styles($text-xsmal);
+}

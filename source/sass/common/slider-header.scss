@@ -21,6 +21,10 @@
   max-width: 542px;
 }
 
+.slider-header__title {
+  @include apply-styles($mobile-h3);
+}
+
 @media #{$not-mobile} {
   .slider-header {
     align-items: flex-end;

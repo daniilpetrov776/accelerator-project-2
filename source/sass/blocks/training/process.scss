@@ -1,0 +1,13 @@
+.process__title {
+  @include apply-styles($mobile-h5);
+}
+
+.process__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.process__item {
+  @include apply-styles($mobile-text-small);
+}
