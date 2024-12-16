@@ -1,0 +1,34 @@
+.slider-header {
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.slider-header__navigation {
+  min-width: 78px;
+  height: 35px;
+  position: static;
+  display: none;
+  flex-flow: wrap;
+  gap: 4px;
+}
+
+.slider-header__title-wrapper {
+  width: 100%;
+  max-width: 542px;
+}
+
+@media #{$not-mobile} {
+  .slider-header {
+    align-items: flex-end;
+  }
+
+  .slider-header__navigation {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+}

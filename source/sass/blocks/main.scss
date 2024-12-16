@@ -1,0 +1,36 @@
+.main {
+  background-image: image-set(
+    "../../img/clouds/clouds-1-mobile@1x.webp" 1x,
+    "../../img/clouds/clouds-1-mobile@2x.webp" 2x,
+    "../../img/clouds/clouds-1-mobile@1x.png" 1x,
+    "../../img/clouds/clouds-1-mobile@2x.png" 2x,
+  );
+  background-repeat: no-repeat;
+  background-position: right top 560px
+}
+
+@media #{$not-mobile} {
+  .main {
+    background-image: image-set(
+      "../../img/clouds/clouds-1-tablet@1x.webp" 1x,
+      "../../img/clouds/clouds-1-tablet@2x.webp" 2x,
+      "../../img/clouds/clouds-1-tablet@1x.png" 1x,
+      "../../img/clouds/clouds-1-tablet@2x.png" 2x,
+    );
+    background-repeat: no-repeat;
+    background-position: right top 900px
+  }
+}
+
+@media #{$desktop-only} {
+  .main {
+    background-image: image-set(
+      "../../img/clouds/clouds-1-desktop@1x.webp" 1x,
+      "../../img/clouds/clouds-1-desktop@2x.webp" 2x,
+      "../../img/clouds/clouds-1-desktop@1x.png" 1x,
+      "../../img/clouds/clouds-1-desktop@2x.png" 2x,
+    );
+    background-repeat: no-repeat;
+    background-position: right top 570px
+  }
+}

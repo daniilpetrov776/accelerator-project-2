@@ -1,0 +1,94 @@
+.full-width-link {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.full-width-link__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 50px;
+  color: $primary;
+  text-decoration: none;
+  @include apply-styles($mobile-button-big);
+  width: 100%;
+  cursor: pointer;
+  transition: color 0.3s $smooth;
+
+  &:hover {
+    color: rgba(2, 102, 193, 0.1);
+  }
+  &:focus-visible {
+    color: #0266c1;
+    outline: none;
+  }
+  &:active {
+    color: $active;
+  }
+  &:disabled {
+    color: $disabled;
+    pointer-events: none;
+    cursor: auto;
+  }
+  &--disabled {
+    color: $disabled;
+    pointer-events: none;
+    cursor: auto;
+  }
+}
+
+.full-width-link__link:hover .full-width-link__arrow::before {
+  background: rgba(2, 102, 193, 0.1);
+}
+
+.full-width-link__link:focus-visible .full-width-link__arrow::before {
+  background: #0266c1;
+}
+
+.full-width-link__link:active .full-width-link__arrow::before {
+  background: $active;
+}
+
+.full-width-link__link:disabled .full-width-link__arrow::before {
+  background: $disabled;
+}
+
+.full-width-link__link--disabled .full-width-link__arrow::before {
+  background: $disabled;
+}
+
+.full-width-link__arrow {
+  display: inline-block;
+  position: relative;
+  width: 6px;
+  height: 12px;
+  margin: 0 0 0 6px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $primary;
+    mask: url("/__spritemap#sprite-arrow-right-view") center center no-repeat;
+    transition: background 0.3s $smooth;
+  }
+}
+
+@media #{$not-mobile} {
+  .full-width-link__link {
+    @include apply-styles($tablet-button-big);
+  }
+}
+
+@media #{$not-mobile} {
+  .full-width-link__link {
+    @include apply-styles($desktop-button-big);
+    position: relative;
+  }
+}
+
