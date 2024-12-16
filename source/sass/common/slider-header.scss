@@ -16,6 +16,11 @@
   gap: 4px;
 }
 
+.slider-header__title-wrapper {
+  width: 100%;
+  max-width: 542px;
+}
+
 @media #{$not-mobile} {
   .slider-header {
     align-items: flex-end;

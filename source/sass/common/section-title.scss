@@ -1,12 +1,29 @@
 .section-title {
   @include apply-styles($mobile-h3);
   margin: 0;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: attr(data-shadow);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -16px;
+    color: $primary;
+    opacity: 3%;
+    @include apply-styles($mobile-h2);
+  }
 }
 
 @media #{$not-mobile} {
   .section-title {
     @include apply-styles($tablet-h3);
-    padding: 0 0 10px 0
+    padding: 0 0 10px 0;
+
+    &::before {
+      @include apply-styles($tablet-h2);
+    }
   }
 }
 
@@ -14,5 +31,9 @@
   .section-title {
     @include apply-styles($desktop-h3);
     padding: 0;
+
+    &::before {
+      @include apply-styles($desktop-h2);
+    }
   }
 }
