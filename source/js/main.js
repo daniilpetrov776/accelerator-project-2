@@ -7,6 +7,7 @@ import { updateHeroState } from './hero';
 import { handleNavMenu } from './header';
 import { blockDisabledElements } from './disable';
 import { heroSwiper, toursSwiper } from './swiper';
+import './timeline';
 
 updateHeroState();
 handleNavMenu();

@@ -1,10 +1,65 @@
+.training-slide {
+  padding: 15px;
+  display: flex;
+  flex-flow: wrap;
+  gap: 15px;
+  border: solid 1px rgba(2, 102, 193, 0.1);
+}
+
 .training-slide__content-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  gap: 15px;
+
   h5 {
     @include apply-styles($h7);
+    max-width: 60%;
+    margin: 0;
+    position: relative;
+  }
+
+  p {
+    @include apply-styles($text-xsmal);
+    margin: 0;
+  }
+
+  span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  a {
+    width: 24px;
+    height: 24px;
+    border: solid 1px rgba(45, 56, 63, 0.3);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      left: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $primary;
+      mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
+    }
   }
 }
 
-
-.training-slide__text {
-  @include apply-styles($text-xsmal);
+.training-slide__content-wrapper div {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }

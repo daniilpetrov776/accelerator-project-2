@@ -6,8 +6,62 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: calc(100% - 36px);
+    top: 18px;
+    left: 6px;
+    background-color: #0266c1;
+  }
 }
 
 .process__item {
   @include apply-styles($mobile-text-small);
+  padding: 0 0 0 63px;
+  max-width: 274px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #0266c1;
+    border-radius: 50%;
+    left: 0;
+    top: 11px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    left: 29px;
+    top: 0;
+    // transform: translateY(-50%);
+    background: $primary;
+    // mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
+  }
+
+  &--direction::after {
+    // background: $primary;
+    background-image: url("/__spritemap#sprite-map-view") center center no-repeat;
+  }
+  // &--gear::after {
+  //   mask: url("/__spritemap#sprite-map-view") center center no-repeat;
+  // }
+  // &--environment::after {
+  //   mask: url("/__spritemap#sprite-map-view") center center no-repeat;
+  // }
+  // &--obstacles::after {
+  //   mask: url("/__spritemap#sprite-map-view") center center no-repeat;
+  // }
 }
