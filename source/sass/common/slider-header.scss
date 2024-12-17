@@ -1,5 +1,4 @@
 .slider-header {
-  min-height: 55px;
   display: flex;
   align-items: center;
   flex-flow: wrap;
@@ -22,12 +21,13 @@
 }
 
 .slider-header__title {
-  @include apply-styles($mobile-h3);
+  margin: 0;
 }
 
 @media #{$not-mobile} {
   .slider-header {
     align-items: flex-end;
+    width: 100%;
   }
 
   .slider-header__navigation {

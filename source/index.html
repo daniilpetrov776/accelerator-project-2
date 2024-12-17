@@ -152,10 +152,10 @@
               <h2 class="slider-header__title section-title" data-shadow="Ближайшие туры">Ближайшие туры</h2>
             </div>
             <div class="slider-header__navigation swiper-navigation swiper-navigation--tours">
-                <button class="slider-header__swiper-button--prev slider-header__swiper-button swiper-button--prev swiper-button-prev--tours swiper-button" tabindex="0" type="button">
+                <button class="slider-header__swiper-button--prev swiper-button--prev slider-header__swiper-button swiper-button--tours-prev swiper-button" tabindex="0" type="button">
                   <span class="visually-hidden">Предыдущий слайд.</span>
                 </button>
-                <button class="slider-header__swiper-button--next slider-header__swiper-button swiper-button--next swiper-button-next--tours swiper-button" tabindex="0" type="button">
+                <button class="slider-header__swiper-button--next swiper-button--next slider-header__swiper-button swiper-button--tours-next swiper-button" tabindex="0" type="button">
                   <span class="visually-hidden">Следующий слайд.</span>
                 </button>
             </div>
@@ -354,24 +354,26 @@
       </section>
       <section class="main__training training" data-test="training">
         <div class="container training__wrapper">
-          <h2 class="training__title section-title" data-shadow="Обучение">Обучение</h2>
-          <div class="training__text-wrapper">
-            <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+          <div class="training__heading-wrapper">
+            <h2 class="training__title section-title" data-shadow="Обучение">Обучение</h2>
+            <div class="training__text-wrapper">
+              <p>Обучение проводится квалифицированными специалистами,<br> за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+            </div>
           </div>
-          <div class="training__training-header slider-header">
-            <div class="slider-header__title-wrapper">
-              <h3 class="slider-header__title">Наши инструкторы</h3>
+          <div class="training__training-header training-header slider-header">
+            <div class="training-header__title-wrapper slider-header__title-wrapper training__training">
+              <h3 class="training-header__title slider-header__title">Наши инструкторы</h3>
             </div>
             <div class="slider-header__navigation swiper-navigation swiper-navigation--training">
-                <button class="slider-header__swiper-button--prev slider-header__swiper-button swiper-button--prev swiper-button-prev--training swiper-button" tabindex="0" type="button">
+                <button class="slider-header__swiper-button--prev slider-header__swiper-button swiper-button--prev swiper-button--training-prev swiper-button" tabindex="0" type="button">
                   <span class="visually-hidden">Предыдущий слайд.</span>
                 </button>
-                <button class="slider-header__swiper-button--next slider-header__swiper-button swiper-button--next swiper-button-next--training swiper-button" tabindex="0" type="button">
+                <button class="slider-header__swiper-button--next slider-header__swiper-button swiper-button--next swiper-button--training-next swiper-button" tabindex="0" type="button">
                   <span class="visually-hidden">Следующий слайд.</span>
                 </button>
             </div>
           </div>
-          <div class="training__spiwer swiper3">
+          <div class="training__swiper swiper3">
             <div class="training__swiper-wrapper swiper-wrapper">
               <div class="training__training-slide training-slide swiper-slide">
                 <div class="training-slide__picture-wrapper">
@@ -386,6 +388,50 @@
                 </div>
                 <div class="training-slide__content-wrapper">
                   <div>
+                    <h5>Александр
+                      Прокофьев</h5>
+                    <a href="#">
+                      <span>Социальные сети тренера.</span>
+                    </a>
+                  </div>
+                  <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+                </div>
+              </div>
+              <div class="training__training-slide training-slide swiper-slide">
+                <div class="training-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-2-desktop@1x.webp, ./img/trainers/trainer-2-desktop@2x.webp 2x" type="image/webp" width="255" height="200">
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-2-desktop@1x.jpg, ./img/trainers/trainer-2-desktop@2x.jpg 2x" type="image/jpeg" width="255" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-2-tablet@1x.webp, ./img/trainers/trainer-2-tablet@2x.webp 2x" type="image/webp" width="183" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-2-tablet@1x.jpg, ./img/trainers/trainer-2-tablet@2x.jpg 2x" type="image/jpeg" width="183" height="200">
+                    <source media="(min-width: 320px)" srcset="./img/trainers/trainer-2-mobile@1x.webp, ./img/trainers/trainer-2-mobile@2x.webp 2x" type="image/webp" width="260" height="200">
+                    <img class="training-slide__picture" src="./img/trainers/trainer-2-mobile@1x.jpg" srcset="./img/trainers/trainer-2-mobile@2x.jpg 2x" width="260" height="200" alt="Наш инструктор.">
+                  </picture>
+                </div>
+                <div class="training-slide__content-wrapper">
+                  <div>
+                    <h5>Светлана
+                      Афиногенова</h5>
+                    <a href="#">
+                      <span>Социальные сети тренера.</span>
+                    </a>
+                  </div>
+                  <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
+                </div>
+              </div>
+              <div class="training__training-slide training-slide swiper-slide">
+                <div class="training-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-3-desktop@1x.webp, ./img/trainers/trainer-3-desktop@2x.webp 2x" type="image/webp" width="255" height="200">
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-3-desktop@1x.jpg, ./img/trainers/trainer-3-desktop@2x.jpg 2x" type="image/jpeg" width="255" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-3-tablet@1x.webp, ./img/trainers/trainer-3-tablet@2x.webp 2x" type="image/webp" width="183" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-3-tablet@1x.jpg, ./img/trainers/trainer-3-tablet@2x.jpg 2x" type="image/jpeg" width="183" height="200">
+                    <source media="(min-width: 320px)" srcset="./img/trainers/trainer-3-mobile@1x.webp, ./img/trainers/trainer-3-mobile@2x.webp 2x" type="image/webp" width="260" height="200">
+                    <img class="training-slide__picture" src="./img/trainers/trainer-3-mobile@1x.jpg" srcset="./img/trainers/trainer-3-mobile@2x.jpg 2x" width="260" height="200" alt="Наш инструктор.">
+                  </picture>
+                </div>
+                <div class="training-slide__content-wrapper">
+                  <div>
                     <h5>Надежда
                       Колесниченко</h5>
                     <a href="#">
@@ -393,6 +439,50 @@
                     </a>
                   </div>
                   <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
+                </div>
+              </div>
+              <div class="training__training-slide training-slide swiper-slide">
+                <div class="training-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-4-desktop@1x.webp, ./img/trainers/trainer-4-desktop@2x.webp 2x" type="image/webp" width="255" height="200">
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-4-desktop@1x.jpg, ./img/trainers/trainer-4-desktop@2x.jpg 2x" type="image/jpeg" width="255" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-4-tablet@1x.webp, ./img/trainers/trainer-4-tablet@2x.webp 2x" type="image/webp" width="183" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-4-tablet@1x.jpg, ./img/trainers/trainer-4-tablet@2x.jpg 2x" type="image/jpeg" width="183" height="200">
+                    <source media="(min-width: 320px)" srcset="./img/trainers/trainer-4-mobile@1x.webp, ./img/trainers/trainer-4-mobile@2x.webp 2x" type="image/webp" width="260" height="200">
+                    <img class="training-slide__picture" src="./img/trainers/trainer-4-mobile@1x.jpg" srcset="./img/trainers/trainer-4-mobile@2x.jpg 2x" width="260" height="200" alt="Наш инструктор.">
+                  </picture>
+                </div>
+                <div class="training-slide__content-wrapper">
+                  <div>
+                    <h5>Федор
+                      Кайгородов</h5>
+                    <a href="#">
+                      <span>Социальные сети тренера.</span>
+                    </a>
+                  </div>
+                  <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
+                </div>
+              </div>
+              <div class="training__training-slide training-slide swiper-slide">
+                <div class="training-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-5-desktop@1x.webp, ./img/trainers/trainer-5-desktop@2x.webp 2x" type="image/webp" width="255" height="200">
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-5-desktop@1x.jpg, ./img/trainers/trainer-5-desktop@2x.jpg 2x" type="image/jpeg" width="255" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-5-tablet@1x.webp, ./img/trainers/trainer-5-tablet@2x.webp 2x" type="image/webp" width="183" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-5-tablet@1x.jpg, ./img/trainers/trainer-5-tablet@2x.jpg 2x" type="image/jpeg" width="183" height="200">
+                    <source media="(min-width: 320px)" srcset="./img/trainers/trainer-5-mobile@1x.webp, ./img/trainers/trainer-5-mobile@2x.webp 2x" type="image/webp" width="260" height="200">
+                    <img class="training-slide__picture" src="./img/trainers/trainer-5-mobile@1x.jpg" srcset="./img/trainers/trainer-5-mobile@2x.jpg 2x" width="260" height="200" alt="Наш инструктор.">
+                  </picture>
+                </div>
+                <div class="training-slide__content-wrapper">
+                  <div>
+                    <h5>Даниэль
+                      Васнецов</h5>
+                    <a href="#">
+                      <span>Социальные сети тренера.</span>
+                    </a>
+                  </div>
+                  <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
                 </div>
               </div>
             </div>

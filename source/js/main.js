@@ -3,15 +3,16 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 import './const';
-import { updateHeroState } from './hero';
+// import { updateHeroState } from './hero';
 import { handleNavMenu } from './header';
 import { blockDisabledElements } from './disable';
-import { heroSwiper, toursSwiper } from './swiper';
+import { heroSwiper, toursSwiper, trainingSwiper } from './swiper';
 import './timeline';
 
-updateHeroState();
+// updateHeroState();
 handleNavMenu();
 blockDisabledElements();
 heroSwiper.init();
 toursSwiper.init();
+trainingSwiper.init();
 

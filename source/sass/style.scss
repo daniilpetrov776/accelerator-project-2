@@ -5,10 +5,10 @@
 @import "./common/global";
 @import "./common/fonts";
 @import "./common/container";
-@import "./blocks/header";
+@import "./blocks/header/header";
+@import "./blocks/header/header-nav";
 @import "./blocks/main";
 @import "./blocks/burger-button";
-@import "./blocks/header-nav";
 @import "./blocks/hero";
 @import "./blocks/tours";
 @import "./blocks/tours-slide";
