@@ -34,7 +34,10 @@ export const heroSwiper = new Swiper('.swiper', {
     clickable: true,
     el: '.swiper-pagination',
     renderBullet: function (index, className) {
-      return `<span class="${className} hero__swiper-pagination-bullet hero__swiper-pagination-bullet--${index}"></span>`;
+      return `<span class="${className} hero__swiper-pagination-bullet hero__swiper-pagination-bullet--${index}"
+        aria-label="Перейти к слайду ${index + 1}."
+        role="button">
+        </span>`;
     },
   },
   on: {
