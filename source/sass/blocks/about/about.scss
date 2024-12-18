@@ -59,11 +59,13 @@
   .about__wrapper {
     display: grid;
     padding: 0 48px 0 0;
-    grid-template-columns: 1fr 270px;
+    grid-template-columns: 450px 270px;
   }
 
   .about__picture-wrapper {
     padding: 134px 0 0;
+    position: relative;
+    z-index: -1;
   }
 
   .about__content-wrapper {

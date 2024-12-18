@@ -13,6 +13,14 @@
   min-height: 55px;
 }
 
+.tours__tours-header-title {
+  margin: 0;
+
+  &::before {
+    top: -26px;
+  }
+}
+
 .tours__spiwer {
   width: 290px;
   height: 416px;

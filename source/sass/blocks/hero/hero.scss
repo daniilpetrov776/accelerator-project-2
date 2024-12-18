@@ -40,7 +40,7 @@
 .hero__slide-content-wrapper {
   padding: 40px 15px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
   gap: 60px;
   width: 100%;
@@ -154,7 +154,6 @@
   opacity: 1;
   background-color: transparent;
   transition: background 0.3s $smooth;
-  margin: 0;
   position: relative;
 
   &::after {
@@ -276,10 +275,38 @@ outline: none;
     align-items: flex-start;
   }
 
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: 500px;
+    right: 105px;
+    bottom: 40px;
+    top: unset;
+    position: absolute;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: unset;
+  }
+
+  .hero__swiper-pagination {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 500px;
+    height: 44px;
+    padding: 0 20px 0 0;
+    right: 0;
+    // background: $white;
+    bottom: 20px;
+    gap: 20px;
+    z-index: 30;
+  }
+
   .hero__slide-content {
     text-align: left;
     width: 780px;
     margin: 0;
+    display: flex;
     padding: 0;
     gap: 25px;
 

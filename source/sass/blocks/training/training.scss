@@ -9,6 +9,14 @@
   gap: 25px
 }
 
+.training__title {
+  margin: 0;
+
+  &::before {
+    top: -26px;
+  }
+}
+
 .training__swiper {
   width: 290px;
   overflow: hidden;
