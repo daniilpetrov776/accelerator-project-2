@@ -8,10 +8,12 @@ import { handleNavMenu } from './header';
 import { blockDisabledElements } from './disable';
 import { heroSwiper, toursSwiper, trainingSwiper } from './swiper';
 import './timeline';
+import { updateHeadingsShadow } from './shadow';
 
 // updateHeroState();
 handleNavMenu();
 blockDisabledElements();
+updateHeadingsShadow();
 heroSwiper.init();
 toursSwiper.init();
 trainingSwiper.init();
