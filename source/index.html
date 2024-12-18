@@ -531,9 +531,50 @@
           </div>
         </div>
       </section>
+      <section class="page__reviews">
+        <div class="container reviews__wrapper">
+          <div class="reviews__reviews-header slider-header">
+            <div class="slider-header__title-wrapper">
+              <h2 class="slider-header__title section-title" data-shadow="Отзывы">Отзывы</h2>
+            </div>
+            <div class="slider-header__navigation swiper-navigation swiper-navigation--reviews">
+                <button class="slider-header__swiper-button--prev swiper-button--prev slider-header__swiper-button swiper-button--reviews-prev swiper-button" tabindex="0" type="button">
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                </button>
+                <button class="slider-header__swiper-button--next swiper-button--next slider-header__swiper-button swiper-button--reviews-next swiper-button" tabindex="0" type="button">
+                  <span class="visually-hidden">Следующий слайд.</span>
+                </button>
+            </div>
+          </div>
+          <div class="reviews__swiper swiper4">
+            <div class="reviews__swiper-wrapper swiper-wrapper">
+              <div class="reviews__reviews-slide reviews-slide swiper-slide">
+                <div class="reviews-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-1-desktop@1x.webp, ./img/trainers/trainer-1-desktop@2x.webp 2x" type="image/webp" width="255" height="200">
+                    <source media="(min-width: 1440px)" srcset="./img/trainers/trainer-1-desktop@1x.jpg, ./img/trainers/trainer-1-desktop@2x.jpg 2x" type="image/jpeg" width="255" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-1-tablet@1x.webp, ./img/trainers/trainer-1-tablet@2x.webp 2x" type="image/webp" width="183" height="200">
+                    <source media="(min-width: 768px)" srcset="./img/trainers/trainer-1-tablet@1x.jpg, ./img/trainers/trainer-1-tablet@2x.jpg 2x" type="image/jpeg" width="183" height="200">
+                    <source media="(min-width: 320px)" srcset="./img/trainers/trainer-1-mobile@1x.webp, ./img/trainers/trainer-1-mobile@2x.webp 2x" type="image/webp" width="260" height="200">
+                    <img class="training-slide__picture" src="./img/trainers/trainer-1-mobile@1x.jpg" srcset="./img/trainers/trainer-1-mobile@2x.jpg 2x" width="260" height="200" alt="Бородатый мужчина с рюкзаком на фоне горы.">
+                  </picture>
+                </div>
+                <div class="reviews-slide__content-wrapper">
+                  <div class="reviews-slide__text-wrapper">
+                    <p>Осенью ходили в поход на Алтай с друзьями. Впечатления потрясающие! Инструкторы, настоящие эксперты, всему научили, все показали. Делились историями о местах, людях, культуре места.</p>
+                    <p>С уверенностью могу сказать, что жизнь разделилась на до этого и после. Ещё никогда не отдыхал так душой и телом. Всем очень рекомендую!</p>
+                  </div>
+                  <div class="reviews-slide__title-wrapper">
+                    <h3 class="reviews-slide__title">Фролов Александр</h3>
+                    <p class="reviews-slide__subtitle">38 лет, Москва</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
-    <div data-test="about">about</div>
     <div data-test="reviews">reviews</div>
     <div data-test="adv">adv</div>
     <div data-test="gallery">gallery</div>
