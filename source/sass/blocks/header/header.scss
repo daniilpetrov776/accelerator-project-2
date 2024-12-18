@@ -3,13 +3,21 @@
   min-height: 100px;
   color: $white;
   padding: 15px 0 1px;
+  position: relative;
+  overflow: visible;
+  --offset: 0;
 
-  &--fixed {
+  &::after {
     position: absolute;
-    top: 0;
-    left: 0;
+    content: "";
+    height: 100vh;
+    max-height: var(--offset);
     width: 100%;
-    z-index: 10;
+    left: 0;
+    top: 100%;
+    background: #0266C1;
+    z-index: 9;
+    transition: max-height 0.3s $smooth;
   }
 }
 
@@ -19,6 +27,8 @@
   align-items: flex-start;
   justify-content: flex-end;
   row-gap: 14px;
+  position: relative;
+  overflow: visible;
 }
 
 .header__burger-button {

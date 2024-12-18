@@ -86,18 +86,53 @@ export const toursSwiper = new Swiper('.swiper2', {
       slidesPerView: 2,
       spaceBetween: 18,
       navigation: {
-        nextEl: '.swiper-button-next--tours',
-        prevEl: '.swiper-button-prev--tours',
+        nextEl: '.swiper-button--tours-next',
+        prevEl: '.swiper-button--tours-prev',
       },
     },
     1440: {
       slidesPerView: 3,
       spaceBetween: 30,
       navigation: {
-        nextEl: '.swiper-button-next--tours',
-        prevEl: '.swiper-button-prev--tours',
+        nextEl: '.swiper-button--tours-next',
+        prevEl: '.swiper-button--tours-prev',
       },
     }
   },
 
+});
+
+export const trainingSwiper = new Swiper('.swiper3', {
+  direction: 'horizontal',
+  init: false,
+  loop: false,
+  simulateTouch: false,
+  keyboard: {
+    enabled: false,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      navigation: false,
+      spaceBetween: 10,
+      initialSlide: 2,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button--training-next',
+        prevEl: '.swiper-button--training-prev',
+      },
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button--training-next',
+        prevEl: '.swiper-button--training-prev',
+      },
+    }
+  },
 });

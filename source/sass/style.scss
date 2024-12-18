@@ -5,15 +5,18 @@
 @import "./common/global";
 @import "./common/fonts";
 @import "./common/container";
-@import "./blocks/header";
+@import "./blocks/header/header";
+@import "./blocks/header/header-nav";
 @import "./blocks/main";
 @import "./blocks/burger-button";
-@import "./blocks/header-nav";
 @import "./blocks/hero";
 @import "./blocks/tours";
 @import "./blocks/tours-slide";
 @import "./blocks/full-width-link";
-@import "./blocks/training";
+@import "./blocks/training/training";
+@import "./blocks/training/training-slide";
+@import "./blocks/training/process";
+@import "./blocks/about/about";
 
 @import "./common/button";
 @import "./common/section-title";

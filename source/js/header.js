@@ -3,6 +3,7 @@ const burgerButton = document.querySelector('.burger-button');
 const navMenu = document.querySelector('.header-nav');
 const navLinks = navMenu.querySelectorAll('.header-nav__link');
 const hero = document.querySelector('.hero');
+const header = document.querySelector('.header');
 
 const updateNavLinksTabIndex = () => {
   const isMenuOpen = burgerButton.classList.contains('burger-button--is-open');
@@ -25,8 +26,9 @@ const updateNavLinksTabIndex = () => {
   });
 };
 
-const getMarginBottom = () => window.matchMedia('(min-width: 768px)').matches ? '45px' : '30px';
-const getMarginTop = () => window.matchMedia('(min-width: 768px)').matches ? '45px' : '11px';
+const updateHeaderOffset = (height) => {
+  header.style.setProperty('--offset', `${height}px`);
+};
 
 const blockScroll = () => {
   document.body.style.overflow = 'hidden';
@@ -43,6 +45,19 @@ const removeOverlay = () => {
   hero.classList.remove('hero--menu-open');
 };
 
+let overflowTimeout;
+
+const handleOverflowVisibility = () => {
+  if (navMenu.classList.contains('header-nav--is-open')) {
+    overflowTimeout = setTimeout(() => {
+      navMenu.classList.add('header-nav--is-overflow-visible');
+    }, 300);
+  } else {
+    clearTimeout(overflowTimeout);
+    navMenu.classList.remove('header-nav--is-overflow-visible');
+  }
+};
+
 const closeMenu = () => {
   navMenu.classList.remove('header-nav--is-open');
   navMenu.classList.add('header-nav--is-closed');
@@ -51,15 +66,17 @@ const closeMenu = () => {
   navMenu.style.marginTop = 0;
   unblockScroll();
   removeOverlay();
+  updateHeaderOffset(0);
+  handleOverflowVisibility();
 };
 
 const openMenu = () => {
   navMenu.classList.add('header-nav--is-open');
   navMenu.classList.remove('header-nav--is-closed');
   navMenu.style.maxHeight = `${navMenu.scrollHeight}px`;
-  navMenu.style.marginBottom = getMarginBottom();
-  navMenu.style.marginTop = getMarginTop();
+  updateHeaderOffset(navMenu.scrollHeight - 1);
   blockScroll();
+  handleOverflowVisibility();
 };
 
 const burgerButtonClickHndler = () => {
