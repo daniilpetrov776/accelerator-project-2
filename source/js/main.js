@@ -6,7 +6,7 @@ import './const';
 // import { updateHeroState } from './hero';
 import { handleNavMenu } from './header';
 import { blockDisabledElements } from './disable';
-import { heroSwiper, toursSwiper, trainingSwiper, reviewsSwiper } from './swiper';
+import { heroSwiper, toursSwiper, trainingSwiper, reviewsSwiper, handleAdvSwiper } from './swiper';
 import './timeline';
 import { updateHeadingsShadow } from './shadow';
 
@@ -18,4 +18,5 @@ heroSwiper.init();
 toursSwiper.init();
 trainingSwiper.init();
 reviewsSwiper.init();
+handleAdvSwiper();
 

@@ -1,8 +1,11 @@
 import Swiper from 'swiper/bundle';
 import { Screen } from './const';
 import { analyzeImageColor } from './adaptive-color';
+import { setCustomSlideMove, throttle } from './utils';
 
 const heroContainer = document.querySelector('.hero');
+
+let advSwiper;
 
 const changeStandartActivePaginationClass = (customActiveClass) => {
   const bullets = document.querySelectorAll('.hero__swiper-pagination-bullet');
@@ -174,3 +177,51 @@ export const reviewsSwiper = new Swiper('.swiper4', {
   },
 });
 
+const initAdvSwiper = () => {
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= Screen.desktop) {
+    if (!advSwiper) {
+      advSwiper = new Swiper('.swiper5', {
+        direction: 'horizontal',
+        loop: true,
+        simulateTouch: false,
+        keyboard: {
+          enabled: false,
+        },
+        breakpoints: {
+          1440: {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            navigation: {
+              nextEl: '.swiper-button--adv-next',
+              prevEl: '.swiper-button--adv-prev',
+            },
+          }
+        },
+      });
+      setCustomSlideMove(advSwiper, {
+        nextEl: '.swiper-button--adv-next',
+        prevEl: '.swiper-button--adv-prev',
+      });
+    } else {
+      if (advSwiper) {
+        advSwiper.destroy(true, true);
+        advSwiper = null;
+      }
+    }
+  }
+};
+
+// const destroyAdvSwiper = () => {
+//   if (advSwiper) {
+//     advSwiper.destroy(true, true); // Уничтожаем слайдер
+//     advSwiper = null;
+//   }
+// };
+
+// const throttledInitAdvSwiper = throttle(initAdvSwiper, 200);
+
+export const handleAdvSwiper = () => {
+  initAdvSwiper();
+  window.addEventListener('resize', initAdvSwiper);
+};

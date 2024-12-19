@@ -57,13 +57,14 @@
     height: 25px;
     left: 29px;
     top: 0;
+    background: $primary;
   }
 
   &--direction::after {
     background: url("/__spritemap#sprite-map-view") center center no-repeat;
   }
   &--gear::after {
-    background: url("/__spritemap#sprite-boots-view") center center no-repeat;
+    mask: url("/__spritemap#sprite-boots-view") center center no-repeat;
   }
   &--environment::after {
     background: url("/__spritemap#sprite-forest-view") center center no-repeat;
