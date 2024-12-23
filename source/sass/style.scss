@@ -5,6 +5,10 @@
 @import "./common/global";
 @import "./common/fonts";
 @import "./common/container";
+@import "./common/button";
+@import "./common/section-title";
+@import "./common/slider-header";
+@import "./common/swiper-button";
 @import "./blocks/header/header";
 @import "./blocks/header/header-nav";
 @import "./blocks/hero/hero";
@@ -20,8 +24,6 @@
 @import "./blocks/reviews/reviews";
 @import "./blocks/adv/adv";
 @import "./blocks/adv/adv-slide";
+@import "./blocks/gallery/gallery";
+@import "./blocks/gallery/gallery-slide";
 
-@import "./common/button";
-@import "./common/section-title";
-@import "./common/slider-header";
-@import "./common/swiper-button";

@@ -694,18 +694,18 @@
         </div>
       </section>
       <section class="page__gallery gallery">
-        <div class="container container--full-width">
-          <h2 class="gallery__title section-title" data-shadow="Фотогалерея">Фотогалерея</h2>
-          <div class="gallery__slider-header slider-header">
+        <div class="container container--full-width gallery__wrapper">
+          <div class="gallery__slider-header slider-header slider-header--full-width">
+            <h2 class="gallery__title section-title" data-shadow="Фотогалерея">Фотогалерея</h2>
             <div class="gallery__content-wrapper">
-              <p>Добавляйте фото с хэштегом #лайфтур, а также отмечайте нас на фото.
+              <p>Добавляйте фото с хэштегом #лайфтур,<br> а также отмечайте нас на фото.
                 Лучшие фотографии украсят этот раздел нашего сайта.</p>
             </div>
             <div class="gallery__slider-nav swiper-navigation swiper-navigation--gallery">
-              <button class="slider-header__swiper-button--prev swiper-button--prev slider-header__swiper-button swiper-button--adv-prev swiper-button" tabindex="0" type="button">
+              <button class="slider-header__swiper-button--prev swiper-button--prev slider-header__swiper-button swiper-button--gallery-prev swiper-button" tabindex="0" type="button">
                 <span class="visually-hidden">Предыдущий слайд.</span>
               </button>
-              <button class="slider-header__swiper-button--next swiper-button--next slider-header__swiper-button swiper-button--adv-next swiper-button" tabindex="0" type="button">
+              <button class="slider-header__swiper-button--next swiper-button--next slider-header__swiper-button swiper-button--gallery-next swiper-button" tabindex="0" type="button">
                 <span class="visually-hidden">Следующий слайд.</span>
               </button>
             </div>
@@ -713,7 +713,84 @@
           <div class="gallery__swiper swiper6">
             <div class="gallery__swiper-wrapper swiper-wrapper">
               <div class="gallery__gallery-slide gallery-slide swiper-slide">
-
+                <div class="gallery-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-1-full-desktop@1x.webp, ./img/gallery/gallery-1-full-desktop@2x.webp 2x" type="image/webp" width="284" height="463">
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-1-full-desktop@1x.jpg, ./img/gallery/gallery-1-full-desktop@2x.jpg 2x" type="image/jpeg" width="284" height="463">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-1-full-tablet@1x.webp, ./img/gallery/gallery-1-full-tablet@2x.webp 2x" type="image/webp" width="253" height="418">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-1-full-tablet@1x.jpg, ./img/gallery/gallery-1-full-tablet@2x.jpg 2x" type="image/jpeg" width="253" height="418">
+                    <source media="(min-width: 320px)" srcset="./img/gallery/gallery-1-full-mobile@1x.webp, ./img/gallery/gallery-1-full-mobile@2x.webp 2x" type="image/webp" width="158" height="266">
+                    <img class="gallery-slide__picture" src="./img/gallery/gallery-1-full-mobile@1x.jpg" srcset="./img/gallery/gallery-1-full-mobile@2x.jpg 2x" width="158" height="266" alt="Человек в походной экипировке стоит на вершине горы и смотрит вдаль.">
+                  </picture>
+                </div>
+              </div>
+              <div class="gallery__gallery-slide gallery-slide gallery-slide--extra swiper-slide">
+                <div class="gallery-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-2-half-bigger-desktop@1x.webp, ./img/gallery/gallery-2-half-bigger-desktop@2x.webp 2x" type="image/webp" width="284" height="233">
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-2-half-bigger-desktop@1x.jpg, ./img/gallery/gallery-2-half-bigger-desktop@2x.jpg 2x" type="image/jpeg" width="284" height="233">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-2-half-bigger-tablet@1x.webp, ./img/gallery/gallery-2-half-bigger-tablet@2x.webp 2x" type="image/webp" width="252" height="210">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-2-half-bigger-tablet@1x.jpg, ./img/gallery/gallery-2-half-bigger-tablet@2x.jpg 2x" type="image/jpeg" width="252" height="210">
+                    <source media="(min-width: 320px)" srcset="./img/gallery/gallery-2-half-bigger-mobile@1x.webp, ./img/gallery/gallery-2-half-bigger-mobile@2x.webp 2x" type="image/webp" width="157" height="135">
+                    <img class="gallery-slide__picture" src="./img/gallery/gallery-2-half-bigger-mobile@1x.jpg" srcset="./img/gallery/gallery-2-half-bigger-mobile@2x.jpg 2x" width="157" height="135" alt="Группа людей сидит у костра в лесу в вечернее время.">
+                  </picture>
+                </div>
+                <div class="gallery-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-3-half-desktop@1x.webp, ./img/gallery/gallery-3-half-desktop@2x.webp 2x" type="image/webp" width="284" height="223">
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-3-half-desktop@1x.jpg, ./img/gallery/gallery-3-half-desktop@2x.jpg 2x" type="image/jpeg" width="284" height="223">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-3-half-tablet@1x.webp, ./img/gallery/gallery-3-half-tablet@2x.webp 2x" type="image/webp" width="252" height="201">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-3-half-tablet@1x.jpg, ./img/gallery/gallery-3-half-tablet@2x.jpg 2x" type="image/jpeg" width="252" height="201">
+                    <source media="(min-width: 320px)" srcset="./img/gallery/gallery-3-half-mobile@1x.webp, ./img/gallery/gallery-3-half-mobile@2x.webp 2x" type="image/webp" width="157" height="125">
+                    <img class="gallery-slide__picture" src="./img/gallery/gallery-3-half-mobile@1x.jpg" srcset="./img/gallery/gallery-3-half-mobile@2x.jpg 2x" width="157" height="125" alt=" Рука человека держит компас на фоне горной местности.">
+                  </picture>
+                </div>
+              </div>
+              <div class="gallery__gallery-slide gallery-slide swiper-slide">
+                <div class="gallery-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-4-full-desktop@1x.webp, ./img/gallery/gallery-4-full-desktop@2x.webp 2x" type="image/webp" width="284" height="463">
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-4-full-desktop@1x.jpg, ./img/gallery/gallery-4-full-desktop@2x.jpg 2x" type="image/jpeg" width="284" height="463">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-4-full-tablet@1x.webp, ./img/gallery/gallery-4-full-tablet@2x.webp 2x" type="image/webp" width="253" height="418">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-4-full-tablet@1x.jpg, ./img/gallery/gallery-4-full-tablet@2x.jpg 2x" type="image/jpeg" width="253" height="418">
+                    <source media="(min-width: 320px)" srcset="./img/gallery/gallery-4-full-mobile@1x.webp, ./img/gallery/gallery-4-full-mobile@2x.webp 2x" type="image/webp" width="158" height="266">
+                    <img class="gallery-slide__picture" src="./img/gallery/gallery-4-full-mobile@1x.jpg" srcset="./img/gallery/gallery-4-full-mobile@2x.jpg 2x" width="158" height="266" alt="Высокая гора с заснеженной вершиной на фоне голубого неба.">
+                  </picture>
+                </div>
+              </div>
+              <div class="gallery__gallery-slide gallery-slide gallery-slide--extra swiper-slide">
+                <div class="gallery-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-5-half-bigger-desktop@1x.webp, ./img/gallery/gallery-5-half-bigger-desktop@2x.webp 2x" type="image/webp" width="284" height="233">
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-5-half-bigger-desktop@1x.jpg, ./img/gallery/gallery-5-half-bigger-desktop@2x.jpg 2x" type="image/jpeg" width="284" height="233">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-5-half-bigger-tablet@1x.webp, ./img/gallery/gallery-5-half-bigger-tablet@2x.webp 2x" type="image/webp" width="252" height="210">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-5-half-bigger-tablet@1x.jpg, ./img/gallery/gallery-5-half-bigger-tablet@2x.jpg 2x" type="image/jpeg" width="252" height="210">
+                    <source media="(min-width: 320px)" srcset="./img/gallery/gallery-5-half-bigger-mobile@1x.webp, ./img/gallery/gallery-5-half-bigger-mobile@2x.webp 2x" type="image/webp" width="157" height="135">
+                    <img class="gallery-slide__picture" src="./img/gallery/gallery-5-half-bigger-mobile@1x.jpg" srcset="./img/gallery/gallery-5-half-bigger-mobile@2x.jpg 2x" width="157" height="135" alt="Люди идут по горной тропе в сторону величественной горы.">
+                  </picture>
+                </div>
+                <div class="gallery-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-6-half-desktop@1x.webp, ./img/gallery/gallery-6-half-desktop@2x.webp 2x" type="image/webp" width="284" height="223">
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-6-half-desktop@1x.jpg, ./img/gallery/gallery-6-half-desktop@2x.jpg 2x" type="image/jpeg" width="284" height="223">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-6-half-tablet@1x.webp, ./img/gallery/gallery-6-half-tablet@2x.webp 2x" type="image/webp" width="252" height="201">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-6-half-tablet@1x.jpg, ./img/gallery/gallery-6-half-tablet@2x.jpg 2x" type="image/jpeg" width="252" height="201">
+                    <source media="(min-width: 320px)" srcset="./img/gallery/gallery-6-half-mobile@1x.webp, ./img/gallery/gallery-6-half-mobile@2x.webp 2x" type="image/webp" width="157" height="125">
+                    <img class="gallery-slide__picture" src="./img/gallery/gallery-6-half-mobile@1x.jpg" srcset="./img/gallery/gallery-6-half-mobile@2x.jpg 2x" width="157" height="125" alt="Синяя палатка с лампочкой на фоне звёздного неба.">
+                  </picture>
+                </div>
+              </div>
+              <div class="gallery__gallery-slide gallery-slide swiper-slide">
+                <div class="gallery-slide__picture-wrapper">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-7-full-desktop@1x.webp, ./img/gallery/gallery-7-full-desktop@2x.webp 2x" type="image/webp" width="284" height="463">
+                    <source media="(min-width: 1440px)" srcset="./img/gallery/gallery-7-full-desktop@1x.jpg, ./img/gallery/gallery-7-full-desktop@2x.jpg 2x" type="image/jpeg" width="284" height="463">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-7-full-tablet@1x.webp, ./img/gallery/gallery-7-full-tablet@2x.webp 2x" type="image/webp" width="253" height="418">
+                    <source media="(min-width: 768px)" srcset="./img/gallery/gallery-7-full-tablet@1x.jpg, ./img/gallery/gallery-7-full-tablet@2x.jpg 2x" type="image/jpeg" width="253" height="418">
+                    <source media="(min-width: 320px)" srcset="./img/gallery/gallery-7-full-mobile@1x.webp, ./img/gallery/gallery-7-full-mobile@2x.webp 2x" type="image/webp" width="158" height="266">
+                    <img class="gallery-slide__picture" src="./img/gallery/gallery-7-full-mobile@1x.jpg" srcset="./img/gallery/gallery-7-full-mobile@2x.jpg 2x" width="158" height="266" alt="Два человека стоят в лесу, вокруг них поднимается дым.">
+                  </picture>
+                </div>
               </div>
             </div>
           </div>

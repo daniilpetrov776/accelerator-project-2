@@ -1,6 +1,7 @@
 .section-title {
   @include apply-styles($mobile-h3);
   position: relative;
+  min-width: 300px;
 
   &::before {
     position: absolute;

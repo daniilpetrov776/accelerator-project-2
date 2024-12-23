@@ -35,24 +35,3 @@ export const throttle = (func, limit) => {
     }
   };
 };
-
-// export const setCustomSlideMove = (swiperInstance, { nextEl, prevEl }) => {
-//   if (!swiperInstance || !nextEl || !prevEl) {
-//     return;
-//   }
-
-//   const nextButton = document.querySelector(nextEl);
-//   const prevButton = document.querySelector(prevEl);
-
-//   if (!nextButton || !prevButton) {
-//     return;
-//   }
-
-//   nextButton.addEventListener('click', () => {
-//     swiperInstance.slideTo(swiperInstance.activeIndex + 2, 600);
-//   });
-
-//   prevButton.addEventListener('click', () => {
-//     swiperInstance.slideTo(swiperInstance.activeIndex - 2, 600);
-//   });
-// };
