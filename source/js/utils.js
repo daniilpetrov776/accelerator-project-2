@@ -11,17 +11,17 @@ export const setCustomSlideMove = (swiperInstance, { nextEl, prevEl }) => {
   }
 
   nextButton.addEventListener('click', () => {
-    swiperInstance.slideNext(300, true);
+    swiperInstance.slideNext(280, true);
     setTimeout(() => {
-      swiperInstance.slideNext(300, true);
-    }, 400);
+      swiperInstance.slideNext(280, true);
+    }, 330);
   });
 
   prevButton.addEventListener('click', () => {
-    swiperInstance.slidePrev(300, true);
+    swiperInstance.slidePrev(280, true);
     setTimeout(() => {
-      swiperInstance.slidePrev(300, true);
-    }, 400);
+      swiperInstance.slidePrev(280, true);
+    }, 330);
   });
 };
 

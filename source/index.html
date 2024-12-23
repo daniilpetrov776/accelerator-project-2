@@ -531,7 +531,7 @@
           </div>
         </div>
       </section>
-      <section class="page__reviews reviews">
+      <section class="page__reviews reviews" data-test="reviews">
         <div class="container container--full-width reviews__wrapper">
           <div class="reviews__reviews-header slider-header">
             <div class="slider-header__title-wrapper reviews__slider-header-wrapper">
@@ -641,7 +641,7 @@
           </div>
         </div>
       </section>
-      <section class="page__adv adv">
+      <section class="page__adv adv" data-test="adv">
         <div class="container container--full-width adv__wrapper">
           <h2 class="adv__title section-title" data-shadow="Преимущества">Преимущества</h2>
           <div class="adv__swiper swiper5">
@@ -684,13 +684,39 @@
             </div>
           </div>
           <div class="adv__slider-nav swiper-navigation swiper-navigation--adv">
-            <button class="slider-header__swiper-button--prev swiper-button--prev slider-header__swiper-button swiper-button--adv-prev swiper-button" tabindex="0" type="button">
+            <button class="swiper-button--prev swiper-button--adv-prev swiper-button" tabindex="0" type="button">
               <span class="visually-hidden">Предыдущий слайд.</span>
             </button>
-            <button class="slider-header__swiper-button--next swiper-button--next slider-header__swiper-button swiper-button--adv-next swiper-button" tabindex="0" type="button">
+            <button class="swiper-button--next swiper-button--adv-next swiper-button" tabindex="0" type="button">
               <span class="visually-hidden">Следующий слайд.</span>
             </button>
+          </div>
         </div>
+      </section>
+      <section class="page__gallery gallery">
+        <div class="container container--full-width">
+          <h2 class="gallery__title section-title" data-shadow="Фотогалерея">Фотогалерея</h2>
+          <div class="gallery__slider-header slider-header">
+            <div class="gallery__content-wrapper">
+              <p>Добавляйте фото с хэштегом #лайфтур, а также отмечайте нас на фото.
+                Лучшие фотографии украсят этот раздел нашего сайта.</p>
+            </div>
+            <div class="gallery__slider-nav swiper-navigation swiper-navigation--gallery">
+              <button class="slider-header__swiper-button--prev swiper-button--prev slider-header__swiper-button swiper-button--adv-prev swiper-button" tabindex="0" type="button">
+                <span class="visually-hidden">Предыдущий слайд.</span>
+              </button>
+              <button class="slider-header__swiper-button--next swiper-button--next slider-header__swiper-button swiper-button--adv-next swiper-button" tabindex="0" type="button">
+                <span class="visually-hidden">Следующий слайд.</span>
+              </button>
+            </div>
+          </div>
+          <div class="gallery__swiper swiper6">
+            <div class="gallery__swiper-wrapper swiper-wrapper">
+              <div class="gallery__gallery-slide gallery-slide swiper-slide">
+
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

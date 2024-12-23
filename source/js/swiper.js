@@ -151,7 +151,6 @@ export const reviewsSwiper = new Swiper('.swiper4', {
   keyboard: {
     enabled: false,
   },
-
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -192,12 +191,20 @@ const initAdvSwiper = () => {
           1440: {
             slidesPerView: 'auto',
             spaceBetween: 0,
+            centeredSlides: false,
+            slideToClickedSlide: false,
             navigation: {
               nextEl: '.swiper-button--adv-next',
               prevEl: '.swiper-button--adv-prev',
             },
           }
         },
+        // on: {
+        //   slideChangeTransitionEnd: () => {
+        //     advSwiper.loopfix();
+        //     advSwiper.update();
+        //   }
+        // },
       });
       setCustomSlideMove(advSwiper, {
         nextEl: '.swiper-button--adv-next',
