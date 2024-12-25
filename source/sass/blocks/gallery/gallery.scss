@@ -1,6 +1,7 @@
 .gallery {
   min-height: 457px;
   overflow: hidden;
+  padding: 20px 0 0;
 }
 
 .gallery__wrapper {
@@ -12,6 +13,10 @@
 
 .gallery__title {
   margin: 0;
+  min-height: 55px;
+  display: flex;
+  align-content: center;
+  flex-flow: wrap;
 }
 
 .gallery__swiper {
@@ -29,6 +34,7 @@
 
 .gallery__slider-header {
   padding: 0 15px;
+  gap: 10px;
 }
 
 .gallery__slider-nav {
@@ -47,6 +53,7 @@
 @media #{$not-mobile} {
   .gallery {
     min-height: 623px;
+    padding: 40px 0 0;
   }
 
   .gallery__wrapper {
@@ -59,6 +66,7 @@
 
   .gallery__slider-header {
     padding: 0 45px;
+    gap: 20px;
   }
 
   .gallery__slider-nav {
@@ -82,6 +90,7 @@
 
   .gallery {
     min-height: 741px;
+    padding: 100px 0 0;
   }
 
   .gallery__wrapper {

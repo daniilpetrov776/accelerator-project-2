@@ -1,3 +1,5 @@
+import { calculateCursor } from './utils';
+
 const formInputs = document.querySelectorAll('.form__input');
 const form = document.querySelector('.form__form-field');
 const emailInput = document.querySelector('.form__input--email');
@@ -15,8 +17,19 @@ export const handleFormTextVisibility = () => {
 };
 
 const validateEmail = (email) => {
-  const emailRegex = /^[a-zA-Z0-9а-яА-ЯёЁ._%+-]+@[a-zA-Z0-9.-]+\.(?:[a-zA-Z]{2,}|рф)$/;
-  return emailRegex.test(email);
+  const latinEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(?:[a-zA-Z]{2,})$/;
+
+  const cyrillicEmailRegex = /^[а-яА-ЯёЁ0-9._%+-]+@[а-яА-ЯёЁ0-9.-]+\.(?:рф)$/;
+
+  return latinEmailRegex.test(email) || cyrillicEmailRegex.test(email);
+};
+
+const clearFormFields = () => {
+  window.addEventListener('unload', () => {
+    if (form) {
+      form.reset();
+    }
+  });
 };
 
 const formSumbitHandler = (evt) => {
@@ -26,14 +39,21 @@ const formSumbitHandler = (evt) => {
   });
 
   let isFormValid = true;
+  let IsEmailValid = true;
 
-  isFormValid = validateEmail(emailInput.value);
   formInputs.forEach((input) => {
     if (!input.validity.valid) {
       input.classList.add('form__input--invalid');
       isFormValid = false;
     }
   });
+
+  IsEmailValid = validateEmail(emailInput.value);
+
+  if (!IsEmailValid) {
+    emailInput.classList.add('form__input--invalid');
+    isFormValid = false;
+  }
 
   if (isFormValid) {
     form.submit();
@@ -54,28 +74,6 @@ const handleInputsChange = () => {
   });
 };
 
-const calculateCursor = (position, oldValue, newValue) => {
-  const nonDigitBefore = /[^0-9]/g;
-
-  // Рассчитываем смещение курсора, чтобы он оставался в правильном месте
-  let count = 0;
-  for (let i = 0; i < position; i++) {
-    if (!oldValue[i].match(nonDigitBefore)) {
-      count++;
-    }
-  }
-
-  let index = 0;
-  while (count > 0 && index < newValue.length) {
-    if (!newValue[index].match(nonDigitBefore)) {
-      count--;
-    }
-    index++;
-  }
-
-  return index;
-};
-
 const formatPhoneNumber = () => {
 
 
@@ -85,32 +83,26 @@ const formatPhoneNumber = () => {
     const rawValue = input.value;
     const lastInputChar = rawValue[cursorPosition - 1];
 
-    // Убираем все форматирующие символы
     const cleaned = rawValue.replace(/[^\d+]/g, '');
 
-    // Проверяем, начал ли пользователь ввод
-    if (cleaned.length === 1 && cleaned !== "7") {
-      // Если пользователь ввел что-то кроме "7", добавляем "+7 ("
-      input.value = "+7 (" + lastInputChar;
+    if (cleaned.length === 1 && cleaned !== '7') {
+      input.value = `+7 (${ lastInputChar}`;
       input.setSelectionRange(5, 5);
       return;
     }
 
-    if (cleaned === "7") {
-      // Если введена только "7", заменяем на "+7 ("
-      input.value = "+7 (" + lastInputChar;
+    if (cleaned === '7') {
+      input.value = `+7 (${ lastInputChar}`;
       input.setSelectionRange(5, 5);
       return;
     }
 
-    // Если пользователь попытался удалить "+7"
     if (cleaned.indexOf('+7') !== 0) {
       input.value = '+7 (';
       input.setSelectionRange(4, 4);
       return;
     }
 
-    // Форматируем номер телефона
     let formatted = '';
     if (cleaned.length > 2) {
       formatted += `+7 (${cleaned.substring(2, 5)}`;
@@ -127,14 +119,15 @@ const formatPhoneNumber = () => {
 
     input.value = formatted;
 
-    // Восстанавливаем позицию курсора
     const newCursorPosition = calculateCursor(cursorPosition, rawValue, input.value);
     input.setSelectionRange(newCursorPosition, newCursorPosition);
   });
 };
+
 export const handleFormValidation = () => {
   form.addEventListener('submit', formSumbitHandler);
   handleFormTextVisibility();
   handleInputsChange();
   formatPhoneNumber();
+  clearFormFields();
 };

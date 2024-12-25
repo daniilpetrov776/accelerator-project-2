@@ -40,6 +40,7 @@
 @media #{$not-mobile} {
   .adv {
     min-height: 1265px;
+    padding: 40px 0;
   }
 
   .adv__wrapper {
@@ -63,6 +64,7 @@
 @media #{$desktop-only} {
   .adv {
     min-height: 734px;
+    padding: 100px 0;
   }
 
   .adv__wrapper {

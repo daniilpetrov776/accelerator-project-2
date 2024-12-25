@@ -35,3 +35,24 @@ export const throttle = (func, limit) => {
     }
   };
 };
+
+export const calculateCursor = (position, oldValue, newValue) => {
+  const nonDigitBefore = /[^0-9]/g;
+
+  let count = 0;
+  for (let i = 0; i < position; i++) {
+    if (!oldValue[i].match(nonDigitBefore)) {
+      count++;
+    }
+  }
+
+  let index = 0;
+  while (count > 0 && index < newValue.length) {
+    if (!newValue[index].match(nonDigitBefore)) {
+      count--;
+    }
+    index++;
+  }
+
+  return index;
+};
