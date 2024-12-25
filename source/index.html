@@ -533,7 +533,7 @@
           </div>
         </div>
       </section>
-      <section class="page__reviews reviews" data-test="reviews">
+      <section class="main__reviews reviews" data-test="reviews">
         <div class="container container--full-width reviews__wrapper">
           <div class="reviews__reviews-header slider-header">
             <div class="slider-header__title-wrapper reviews__slider-header-wrapper">
@@ -641,9 +641,10 @@
                 </div>
               </div>
           </div>
+          </div>
         </div>
       </section>
-      <section class="page__adv adv" data-test="adv">
+      <section class="main__adv adv" data-test="adv">
         <div class="container container--full-width adv__wrapper">
           <h2 class="adv__title section-title" data-shadow="Преимущества">Преимущества</h2>
           <div class="adv__swiper swiper5">
@@ -695,7 +696,7 @@
           </div>
         </div>
       </section>
-      <section class="page__gallery gallery" data-test="gallery">
+      <section class="main__gallery gallery" data-test="gallery">
         <div class="container container--full-width gallery__wrapper">
           <div class="gallery__slider-header slider-header slider-header--full-width">
             <h2 class="gallery__title section-title" data-shadow="Фотогалерея">Фотогалерея</h2>
@@ -798,7 +799,7 @@
           </div>
         </div>
       </section>
-      <section class="page__form form">
+      <section class="main__form form" data-test="form">
         <div class="container container--full-width form__wrapper">
           <div class="form__content-wrapper">
             <h2>Остались вопросы?</h2>
@@ -818,9 +819,84 @@
         </div>
       </section>
     </main>
-    <footer></footer>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <footer class="page__footer footer" data-test="footer">
+      <div class="container container--full-width footer__wrapper">
+        <div class="footer__contacts contacts">
+          <div class="contacts__info-wrapper">
+            <h2 class="contacts__title section-title">Контакты</h2>
+            <div class="contacts__content-wrapper">
+              <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+            </div>
+            <ul class="contacts__contacts-list">
+              <li class="contacts__contacts-list-item contacts__contacts-list-item--phone">
+                <h3 class="contacts__contacts-list-item-name">Телефон</h3>
+                <a class="contacts__contacts-link" href="tel:+79837454545">+7 983 745-45-45</a>
+              </li>
+              <li class="contacts__contacts-list-item contacts__contacts-list-item--email">
+                <h3 class="contacts__contacts-list-item-name">Email</h3>
+                <a class="contacts__contacts-link" href="mailto:info@lifetour.com">info@lifetour.com</a>
+              </li>
+              <li class="contacts__contacts-list-item contacts__contacts-list-item--adress">
+                <h3 class="contacts__contacts-list-item-name">Адрес</h3>
+                <p class="contacts__contacts-link">г. Москва, пр-т Мира, д. 14, офис 101</p>
+              </li>
+            </ul>
+          </div>
+          <div class="contacts__map-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/map/map-desktop@1x.webp, ./img/map/map-desktop@2x.webp 2x" type="image/webp" width="600" height="324">
+              <source media="(min-width: 1440px)" srcset="./img/map/map-desktop@1x.png, ./img/map/map-desktop@2x.png 2x" type="image/png" width="600" height="324">
+              <source media="(min-width: 768px)" srcset="./img/map/map-tablet@1x.webp, ./img/map/map-tablet@2x.webp 2x" type="image/webp" width="768" height="340">
+              <source media="(min-width: 768px)" srcset="./img/map/map-tablet@1x.png, ./img/map/map-tablet@2x.png 2x" type="image/png" width="768" height="340">
+              <source media="(min-width: 320px)" srcset="./img/map/map-mobile@1x.webp, ./img/map/map-mobile@2x.webp 2x" type="image/webp" width="320" height="343">
+              <img class="contacts__map-picture" src="./img/map/map-mobile@1x.png" srcset="./img/map/map-mobile@2x.png 2x" width="320" height="343" alt="Расположение нашего офиса на карте.">
+            </picture>
+          </div>
+        </div>
+        <div class="footer__bottom bottom">
+          <div class="bottom__logo-wrapper">
+            <a class="bottom__logo-link" href="#">
+              <img class="bottom__logo" width="142" height="42" src="./img/logo/logo-dark.svg" alt="Логотип туристической компании.">
+            </a>
+          </div>
+          <nav class="bottom__bottom-nav bottom-nav">
+            <ul class="bottom-nav__list">
+              <li class="bottom-nav__item">
+                <a class="bottom-nav__link" href="#">Туры</a>
+              </li>
+              <li class="bottom-nav__item">
+                <a class="bottom-nav__link" href="#">Обучение</a>
+              </li>
+              <li class="bottom-nav__item">
+                <a class="bottom-nav__link" href="#">О нас</a>
+              </li>
+              <li class="bottom-nav__item">
+                <a class="bottom-nav__link" href="#">Отзывы</a>
+              </li>
+              <li class="bottom-nav__item">
+                <a class="bottom-nav__link" href="#">Фотографии</a>
+              </li>
+              <li class="bottom-nav__item">
+                <a class="bottom-nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="bottom__phone" href="tel:+78007253232">8 800 725-32-32</a>
+          <ul class="bottom__socials socials">
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--ok" href="#"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--reddit" href="#"></a>
+            </li>
+          </ul>
+          <a class="bottom__policy policy">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="js/main.js"></script>
   </body>
 
