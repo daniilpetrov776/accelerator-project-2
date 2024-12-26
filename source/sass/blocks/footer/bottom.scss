@@ -1,0 +1,119 @@
+.bottom {
+  min-height: 268px;
+  padding: 23px 15px 10px 15px;
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.bottom__phone {
+  display: none;
+}
+
+.bottom__socials  {
+  margin: 0;
+}
+
+.bottom__policy {
+  margin: auto 0 0 0;
+}
+
+.bottom__logo-link {
+  transition: opacity 0.3s $smooth;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 10px);
+    height: calc(100%);
+    border: solid 1px $primary;
+    left: -5px;
+    top: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s $smooth;
+    transform-origin: left;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+@media #{$not-mobile} {
+  .bottom {
+    min-height: 186px;
+    padding: 34px 45px 20px 45px;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+  }
+}
+
+@media #{$desktop-only} {
+  .bottom {
+    min-height: 210px;
+    padding: 32px 120px 32px 120px;
+    gap: 17px;
+  }
+
+  .bottom__phone {
+    display: block;
+    color: $primary;
+    @include apply-styles($desktop-h6);
+    text-decoration: none;
+    padding: 21px 0;
+    transition: color 0.3s $smooth;
+
+    &:hover {
+      color: #0266c11a;
+    }
+
+    &:focus-visible {
+      color: $additional;
+      outline: none;
+    }
+
+    &:active {
+      color: $active;
+    }
+
+    &--disabled {
+      color: $disabled;
+      pointer-events: none;
+      cursor: auto;
+    }
+
+    &:disabled {
+      color: $disabled;
+    }
+  }
+
+  .bottom__logo-wrapper {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .bottom__socials  {
+    margin: 5px 0 0 0;
+  }
+
+  .bottom__logo-link {
+    padding: 9px 0;
+  }
+}

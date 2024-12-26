@@ -96,6 +96,7 @@
 .form__input:disabled {
   color: $disabled;
   border-color: $disabled;
+  background: $white;
 }
 
 .form__input::placeholder {

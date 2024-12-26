@@ -25,7 +25,7 @@ const validateEmail = (email) => {
 };
 
 const clearFormFields = () => {
-  window.addEventListener('unload', () => {
+  window.addEventListener('beforeunload', () => {
     if (form) {
       form.reset();
     }

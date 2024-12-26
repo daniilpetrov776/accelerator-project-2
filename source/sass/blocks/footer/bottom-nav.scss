@@ -1,0 +1,126 @@
+.bottom-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.bottom-nav__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: wrap column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.bottom-nav__item {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: wrap;
+}
+
+.bottom-nav__link {
+  padding: 5px 0;
+  color: $primary;
+  text-decoration: none;
+  @include apply-styles($mobile-button-input-regular);
+  position: relative;
+  transition: color 0.3s $smooth;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 10px);
+    height: 1px;
+    background-color: $primary;
+    left: -5px;
+    bottom: 17px;
+    transform: scaleX(0);
+    transition: transform 0.3s $smooth;
+    transform-origin: left;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 10px);
+    height: calc(100% - 34px);
+    border: solid 1px $primary;
+    left: -5px;
+    top: 17px;
+    transform: scaleX(0);
+    transition: transform 0.3s $smooth;
+    transform-origin: left;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  &:active {
+    color: #0266c1;
+  }
+
+  &--disabled {
+    color: $disabled;
+    pointer-events: none;
+    cursor: auto;
+  }
+
+  &:disabled {
+    color: $disabled;
+  }
+}
+
+@media #{$not-mobile} {
+  .bottom-nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  .bottom-nav__list {
+    gap: 20px;
+    flex-flow: wrap row;
+    justify-content: flex-start;
+  }
+
+  .bottom-nav__item {
+    width: auto;
+    align-items: center;
+    min-height: 42px;
+  }
+
+  .bottom-nav__link {
+    padding: 14px 0;
+    @include apply-styles($tablet-button-input-regular);
+  }
+}
+
+@media #{$desktop-only} {
+  .bottom-nav {
+    gap: 30px;
+  }
+
+  .bottom-nav__list {
+    gap: 30px;
+  }
+
+  .bottom-nav__item {
+    min-height: 60px;
+  }
+
+  .bottom-nav__link {
+    padding: 22px 0;
+    @include apply-styles($desktop-button-input-regular);
+  }
+}

@@ -8,6 +8,7 @@
   height: 356px;
   overflow-y: auto;
   overflow-x: clip;
+  background: $white;
 }
 
 .training-slide__content-wrapper {
@@ -58,7 +59,40 @@
       transform: translateY(-50%);
       background: $primary;
       mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
+      transition: background 0.3s $smooth;
     }
+
+    transition: border 0.3s $smooth, background 0.3s $smooth;
+
+    &:hover {
+      border-color: $primary;
+    }
+
+    &:focus-visible {
+      border-color: transparent;
+      outline: none;
+    }
+
+    &:active {
+      background-color: #0266c1;
+      border-color: #0266c1;
+    }
+
+    &:active::after {
+      background-color: $white;
+    }
+  }
+}
+
+.training-slide__link {
+  &--disabled {
+    opacity: 30%;
+    pointer-events: none;
+    cursor: auto;
+  }
+
+  &:disabled {
+    opacity: 30%;
   }
 }
 

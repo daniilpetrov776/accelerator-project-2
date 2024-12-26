@@ -16,5 +16,11 @@ export const blockDisabledElements = () => {
   blockDisabledElementsBySelector('.header__phone', 'header__phone--disabled');
   blockDisabledElementsBySelector('.button', 'button--disabled');
   blockDisabledElementsBySelector('.full-width-link__link', 'full-width-link__link--disabled');
+  blockDisabledElementsBySelector('.contacts__contacts-link', 'contacts__contacts-link--disabled');
+  blockDisabledElementsBySelector('.training-slide__link', 'training-slide__link--disabled');
+  blockDisabledElementsBySelector('.bottom__phone', 'bottom__phone--disabled');
+  blockDisabledElementsBySelector('.socials__link', 'socials__link--disabled');
+  blockDisabledElementsBySelector('.bottom-nav__link', 'bottom-nav__link--disabled');
+  blockDisabledElementsBySelector('.policy', 'policy--disabled');
 };
 
