@@ -1,6 +1,6 @@
 .reviews {
   min-height: 594px;
-  padding: 20px 0 5px 0;
+  padding: 20px 0;
   overflow: hidden;
 }
 
@@ -96,7 +96,7 @@
 
 @media #{$not-mobile} {
   .reviews {
-    padding: 25px 0 0 0;
+    padding: 60px 0 40px 0;
     min-height: 437px;
   }
 

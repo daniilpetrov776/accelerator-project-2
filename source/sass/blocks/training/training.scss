@@ -1,5 +1,6 @@
 .training {
   min-height: 946px;
+  padding: 36px 0 20px;
 }
 
 .training__wrapper {
@@ -13,7 +14,7 @@
   margin: 0;
 
   &::before {
-    top: -26px;
+    top: -16px;
   }
 }
 
@@ -40,6 +41,7 @@
 @media #{$not-mobile} {
   .training {
     min-height: 1050px;
+    padding: 60px 0 40px;
   }
 
   .training__swiper {

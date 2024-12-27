@@ -268,6 +268,7 @@ export const handleAdvSwiper = () => {
   );
 };
 
+
 export const handleGallerySwiper = () => {
   initGallerySwiper();
   window.addEventListener(
