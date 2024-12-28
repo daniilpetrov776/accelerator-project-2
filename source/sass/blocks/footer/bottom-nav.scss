@@ -29,44 +29,6 @@
   position: relative;
   transition: color 0.3s $smooth;
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: calc(100% + 10px);
-    height: 1px;
-    background-color: $primary;
-    left: -5px;
-    bottom: 17px;
-    transform: scaleX(0);
-    transition: transform 0.3s $smooth;
-    transform-origin: left;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: calc(100% + 10px);
-    height: calc(100% - 34px);
-    border: solid 1px $primary;
-    left: -5px;
-    top: 17px;
-    transform: scaleX(0);
-    transition: transform 0.3s $smooth;
-    transform-origin: left;
-  }
-
-  &:hover::before {
-    transform: scaleX(1);
-  }
-
-  &:focus-visible {
-    outline: none;
-  }
-
-  &:focus-visible::after {
-    transform: scaleX(1);
-  }
-
   &:active {
     color: #0266c1;
   }
@@ -122,5 +84,44 @@
   .bottom-nav__link {
     padding: 22px 0;
     @include apply-styles($desktop-button-input-regular);
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% + 10px);
+      height: 1px;
+      background-color: $primary;
+      left: -5px;
+      bottom: 17px;
+      transform: scaleX(0);
+      transition: transform 0.3s $smooth;
+      transform-origin: left;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% + 10px);
+      height: calc(100% - 34px);
+      border: solid 1px $primary;
+      left: -5px;
+      top: 17px;
+      transform: scaleX(0);
+      transition: transform 0.3s $smooth;
+      transform-origin: left;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible::after {
+      transform: scaleX(1);
+    }
   }
 }

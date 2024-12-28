@@ -10,12 +10,23 @@
   gap: 25px
 }
 
+.training-header__title {
+  margin: 0;
+}
+
 .training__title {
   margin: 0;
 
   &::before {
     top: -16px;
   }
+}
+
+.training__heading-wrapper {
+  gap: 35px;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
 }
 
 .training__swiper {
@@ -51,9 +62,7 @@
 
   .training__heading-wrapper {
     width: 100%;
-    display: flex;
-    flex-flow: wrap;
-    align-items: flex-start;
+
     gap: 26px;
   }
 
@@ -86,6 +95,11 @@
   .training__wrapper {
     gap: 56px;
   }
+
+  .training__heading-wrapper {
+    gap: 37px;
+  }
+
 
   .training__text-wrapper p{
     @include apply-styles($desktop-text-regular);

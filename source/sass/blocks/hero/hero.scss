@@ -26,6 +26,10 @@
   opacity: 1;
 }
 
+.hero.hero--menu-open .hero__swiper {
+  pointer-events: none;
+}
+
 .hero__swiper {
   width: 320px;
   height: 568px;

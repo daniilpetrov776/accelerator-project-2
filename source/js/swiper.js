@@ -44,6 +44,23 @@ export const heroSwiper = new Swiper('.swiper', {
         </span>`;
     },
   },
+  breakpoints: {
+    320: {
+      pagination: {
+        clickable: false,
+      }
+    },
+    768: {
+      pagination: {
+        clickable: false,
+      }
+    },
+    1440: {
+      pagination: {
+        clickable: true,
+      }
+    },
+  },
   on: {
     init: function() {
       changeStandartActivePaginationClass('hero__swiper-pagination-bullet--active');
