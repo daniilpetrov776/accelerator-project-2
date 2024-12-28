@@ -6,7 +6,7 @@
     "../../img/clouds/clouds-1-mobile@2x.png" 2x,
   );
   background-repeat: no-repeat;
-  background-position: right top 560px;
+  background-position: right top 575px;
 }
 
 @media #{$not-mobile} {
@@ -37,7 +37,7 @@
         "../../img/clouds/clouds-1-tablet@2x.png" 2x,
       );
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-position: right top 4670px, left top 4165px, right top 2285px,  right top 900px;
+    background-position: right top 4670px, left top 4165px, right top 2285px,  right top 942px;
   }
 }
 
@@ -69,6 +69,6 @@
       "../../img/clouds/clouds-1-desktop@2x.png" 2x,
     );
     background-repeat: no-repeat;
-    background-position: right top 3730px, left top 3550px, right top 2270px, right top 570px;
+    background-position: right top 3730px, left top 3550px, right top 2270px, right top 674px;
   }
 }

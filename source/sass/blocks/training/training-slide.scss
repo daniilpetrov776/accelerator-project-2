@@ -121,6 +121,14 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
+  height: min-content;
+}
+
+.training-slide__content-wrapper {
+  display: block;
+  p {
+    margin: 15px 0 0 0;
+  }
 }
 
 @media #{$not-mobile} {
@@ -148,5 +156,9 @@
 
   .training-slide__content-wrapper {
     height: 111px;
+  }
+
+  .training-slide__content-wrapper h5 {
+    max-width: 55%;
   }
 }

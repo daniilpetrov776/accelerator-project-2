@@ -15,9 +15,11 @@
 
 .tours__tours-header-title {
   margin: 0;
+  position: relative;
+  top: 1px;
 
   &::before {
-    top: -26px;
+    top: -16px;
   }
 }
 

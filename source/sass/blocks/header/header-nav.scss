@@ -128,16 +128,18 @@
     min-height: 62px;
     display: flex;
     align-items: center;
-    width: 838px;
+    width: 600px;
+    margin: 0 0 0 60px;
   }
 
   .header-nav__list {
-    width: 838px;
+    width: 100%;
     display: flex;
     flex-flow: wrap;
-    place-content: center;
+    align-items: center;
+    justify-content: flex-start;
     min-height: 62px;
-    gap: 30px;
+    gap: 26px;
     margin: 0;
   }
 

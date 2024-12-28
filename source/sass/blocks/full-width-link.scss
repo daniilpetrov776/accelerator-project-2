@@ -1,19 +1,20 @@
 .full-width-link {
   width: 100%;
   text-align: center;
-  padding: 10px 0;
+  padding: 0;
 }
 
 .full-width-link__link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 50px;
+  padding: 10px 48px;
   color: $primary;
   text-decoration: none;
   @include apply-styles($mobile-button-big);
   width: 100%;
   cursor: pointer;
+  gap: 6px;
   transition: color 0.3s $smooth;
 
   &:hover {
@@ -64,6 +65,7 @@
   width: 6px;
   height: 12px;
   margin: 0 0 0 6px;
+  left: -2px;
 
   &::before {
     position: absolute;

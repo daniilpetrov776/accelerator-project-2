@@ -39,6 +39,10 @@
   max-width: 274px;
   position: relative;
 
+  &--obstacles {
+    padding:  0 10px 0 63px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -76,10 +80,15 @@
 
 
 @media #{$not-mobile} {
+  .process {
+    gap: 102px;
+  }
+
+
   .process__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 104px 198px;
+    gap: 104px 134px;
     &::before {
       background: transparent;
     }
@@ -88,13 +97,14 @@
   .process__item {
     @include apply-styles($tablet-text-small);
     max-width: 272px;
-    padding: 0 0 0 35px;
+    padding: 0 10px 0 35px;
     &::before {
       background: transparent;
     }
 
     &::after {
       left: 0;
+      top: 2px;
     }
 
     &--gear {
@@ -124,6 +134,7 @@
   }
 
   .process__title {
+    margin: 36px 0 0;
     @include apply-styles($desktop-h5);
   }
   .process__list {
@@ -145,6 +156,20 @@
     @include apply-styles($desktop-text-regular);
     max-width: 253px;
     min-height: 102px;
+    padding: 5px 5px 0 45px;
+
+    &::after {
+      left: 11px;
+      top: 8px;
+    }
+
+    &--direction {
+      order: -1;
+    }
+
+    &--gear {
+      order: 0;
+    }
 
     &::before {
       background: #0266c1;

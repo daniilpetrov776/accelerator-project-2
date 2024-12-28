@@ -10,8 +10,10 @@
   gap: 25px
 }
 
-.training-header__title {
+.training__header-title {
   margin: 0;
+  position: relative;
+  top: 3px;
 }
 
 .training__title {
@@ -34,7 +36,7 @@
   overflow: hidden;
 }
 
-.training-header__title {
+.training__header-title{
   @include apply-styles($mobile-h3)
 }
 
@@ -59,6 +61,9 @@
     width: 678px;
   }
 
+  .training__training-header {
+    align-items: flex-start;
+  }
 
   .training__heading-wrapper {
     width: 100%;
@@ -66,12 +71,14 @@
     gap: 26px;
   }
 
-  .training-header__title {
+  .training__header-title {
     @include apply-styles($tablet-h3)
   }
 
 
   .training__text-wrapper p{
+    position: relative;
+    top: -2px;
     @include apply-styles($tablet-text-regular);
     width: 100%;
     text-align: left;
@@ -81,7 +88,7 @@
     display: block;
   }
 
-  .training__training-header {
+  .training__header-title {
     min-height: 35px;
     margin: 0 0 5px 0;
   }
@@ -92,21 +99,34 @@
     min-height: 889px;
   }
 
+  .training__title  {
+    width: 100%;
+  }
+
   .training__wrapper {
-    gap: 56px;
+    gap: 20px;
   }
 
   .training__heading-wrapper {
     gap: 37px;
   }
 
+  .training__training-header {
+    align-items: flex-end;
+  }
 
   .training__text-wrapper p{
+    width: 820px;
     @include apply-styles($desktop-text-regular);
   }
 
-  .training-header__title {
-    @include apply-styles($desktop-h3)
+  .training__text-wrapper br {
+    display: none;
+  }
+
+  .training__header-title {
+    @include apply-styles($desktop-h3);
+    margin: 36px 0 0 0;
   }
 
   .training__swiper {

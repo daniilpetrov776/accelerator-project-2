@@ -7,7 +7,7 @@
   display: flex;
   flex-flow: wrap;
   align-items: flex-start;
-  gap: 25px;
+  gap: 26px;
   padding: 0 15px;
   h2 {
     @include apply-styles($mobile-h3);
@@ -36,7 +36,7 @@
     display: flex;
     flex-flow: wrap;
     align-items: flex-start;
-    gap: 15px;
+    gap: 13px;
   }
 
   h3 {
@@ -73,11 +73,13 @@
     h2 {
       @include apply-styles($tablet-h3);
       margin: 0 0 11px;
+      position: relative;
+      top: 5px;
 
       &::before {
         @include apply-styles($tablet-h2);
-        bottom: 0;
-        left: 2px;
+        bottom: -5px;
+        left: 0;
       }
     }
 
@@ -86,7 +88,7 @@
     }
 
     div {
-      gap: 20px;
+      gap: 13px;
     }
 
     p {
@@ -116,7 +118,7 @@
     flex-flow: wrap column;
     h2 {
       @include apply-styles($desktop-h3);
-      margin: 0 0 37px;
+      margin: 30px 0 30px;
 
       &::before {
         @include apply-styles($desktop-h2);
@@ -128,8 +130,19 @@
       @include apply-styles($desktop-h5);
     }
 
+    div {
+      padding: 0 90px 0 0;
+      gap: 16px;
+    }
+
+    div:last-of-type {
+      padding: 0 78px 0 0;
+    }
+
     p {
       @include apply-styles($desktop-text-small);
     }
+
+
   }
 }
