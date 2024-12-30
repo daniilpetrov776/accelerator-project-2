@@ -2,13 +2,13 @@
   display: flex;
   flex-flow: wrap;
   width: 290px;
-  min-height: 257px;
+  min-height: 239px;
   align-items: flex-start;
   justify-content: center;
   text-align: center;
   border: solid 1px rgba(2, 102, 193, 0.1);
-  padding: 20px 10px;
-  gap: 20px;
+  padding: 18px 10px;
+  gap: 22px;
   background: $white;
 }
 
@@ -56,14 +56,20 @@
   flex-flow: wrap;
   justify-content: center;
   gap: 15px;
+  width: 270px;
+  position: relative;
+  top: -2px;
   h3 {
     @include apply-styles($mobile-h6);
     margin: 0;
+    padding: 0 22px;
+    font-weight: 600
   }
 
   p {
     @include apply-styles($mobile-text-small);
     margin: 0;
+    width: 270px;
   }
 }
 
@@ -71,25 +77,37 @@
   .adv-slide {
     width: 324px;
     min-height: 340px;
-    padding: 30px 20px;
+    padding: 28px 20px;
     gap: 25px;
   }
 
   .adv-slide__icon {
     width: 48px;
     height: 48px;
+    position: relative;
+    top: 1px;
   }
 
   .adv-slide__content-wrapper {
+    width: 284px;
+    top: -1px;
     h3 {
       @include apply-styles($tablet-h6);
+      padding: 0;
+      position: relative;
+      top: 2px;
+      font-weight: 600;
     }
 
     p {
       font-size: 14px;
-      line-height: 22px
+      line-height: 22px;
+      width: 284px;
+      position: relative;
+      top: 1px;
     }
   }
+
 }
 
 @media #{$desktop-only} {
@@ -97,8 +115,9 @@
   .adv-slide {
     width: 380px;
     height: 329px;
-    padding: 40px 20px;
+    padding: 38px 20px;
     gap: 30px;
+    min-height: 329px;
   }
 
   .adv-slide__icon {
@@ -107,8 +126,13 @@
   }
 
   .adv-slide__content-wrapper {
+    text-align: center;
+    width: 340px;
     h3 {
       @include apply-styles($desktop-h6);
+    }
+    p {
+      width: 340px;
     }
   }
 }

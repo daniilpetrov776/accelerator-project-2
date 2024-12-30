@@ -47,11 +47,12 @@
 @media #{$not-mobile} {
   .bottom-nav {
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    width: 494px;
   }
 
   .bottom-nav__list {
-    gap: 20px;
+    gap: 24px;
     flex-flow: wrap row;
     justify-content: flex-start;
   }
@@ -71,6 +72,7 @@
 @media #{$desktop-only} {
   .bottom-nav {
     gap: 30px;
+    width: 596px;
   }
 
   .bottom-nav__list {

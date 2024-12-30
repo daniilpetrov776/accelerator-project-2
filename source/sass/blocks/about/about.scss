@@ -78,7 +78,7 @@
 
       &::before {
         @include apply-styles($tablet-h2);
-        bottom: -5px;
+        bottom: 1px;
         left: 0;
       }
     }

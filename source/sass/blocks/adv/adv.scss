@@ -1,6 +1,6 @@
 .adv {
   min-height: 1438px;
-  padding: 20px 0;
+  padding: 36px 0 20px 0;
 }
 
 .adv__wrapper {
@@ -27,9 +27,10 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  margin: 2px 0 36px;
   &::before {
-    top: -16px;
-    left: -18px;
+    top: -14px;
+    left: 0;
   }
 }
 
@@ -40,7 +41,7 @@
 @media #{$not-mobile} {
   .adv {
     min-height: 1265px;
-    padding: 40px 0;
+    padding: 60px 0 40px 0;
   }
 
   .adv__wrapper {
@@ -49,6 +50,11 @@
 
   .adv__title {
     width: 100%;
+    top:  0;
+    margin: 0 0 50px 0;
+    &::before {
+      top: -15px;
+    }
   }
 
   .adv__swiper {
@@ -64,12 +70,19 @@
 @media #{$desktop-only} {
   .adv {
     min-height: 734px;
-    padding: 100px 0;
+    padding: 135px 0 100px 0;
   }
 
   .adv__wrapper {
     padding: 0;
     gap: 50px;
+  }
+
+  .adv__title {
+    margin: 0;
+    &::before {
+      top: -29px;
+    }
   }
 
   .adv__swiper {

@@ -17,6 +17,9 @@
   display: flex;
   align-content: center;
   flex-flow: wrap;
+  &::before {
+    top: 2px;
+  }
 }
 
 .gallery__swiper {
@@ -58,6 +61,14 @@
 
   .gallery__wrapper {
     gap: 21px;
+  }
+
+  .gallery__title {
+    top: 10px;
+
+    &::before {
+      top: -5px;
+    }
   }
 
   .gallery__swiper {

@@ -8,7 +8,7 @@
   flex-flow: wrap column;
   gap: 20px;
   align-items: center;
-  justify-content: center;
+  padding: 176px 0 0 0;
   width: 320px;
   min-height: 638px;
   background:
@@ -29,9 +29,11 @@
   display: flex;
   align-items: flex-start;
   flex-flow: wrap;
-  gap: 20px;
+  gap: 17px;
   width: 258px;
   text-align: center;
+  position: relative;
+  top: 1px;
   h2 {
     @include apply-styles($mobile-h3);
     margin: 0;
@@ -40,7 +42,7 @@
 
   p {
     @include apply-styles($mobile-text-small);
-    margin: 0;
+    margin: 0 auto;
   }
 }
 
@@ -51,6 +53,8 @@
   justify-content: center;
   width: 258px;
   gap: 8px;
+  position: relative;
+  top: 1px;
 }
 
 .form__input-wrapper {
@@ -121,8 +125,13 @@
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
-  min-height: 50px;
+  min-height: 58px;
   padding: 5px 10px;
+}
+
+.form__submit-button-text {
+  position: relative;
+  top: 1px;
 }
 
 @media #{$not-mobile} {
@@ -133,20 +142,27 @@
 .form__content-wrapper {
   gap: 25px;
   width: 360px;
+  top: 10px;
   h2 {
     @include apply-styles($tablet-h3);
   }
 
   p {
+    position: relative;
+    top: -1px;
     @include apply-styles($tablet-text-regular);
     margin: 0;
+  }
+
+  br {
+    display: none;
   }
 }
 
 .form__wrapper {
   width: 768px;
   min-height: 680px;
-  gap: 25px;
+  gap: 22px;
   background:
   image-set(
     url("../../../img/form/forest-tablet@1x.webp") type("image/webp") 1x,
@@ -173,6 +189,7 @@
   .form__form-field {
     width: 360px;
     gap: 11px;
+    top: 10px;
   }
 
   .form__submit-button {
@@ -204,6 +221,8 @@
   .form__wrapper {
     width: 1440px;
     min-height: 760px;
+    padding:  286px 0 0 0;
+    gap: 36px;
     background:
     image-set(
       url("../../../img/form/forest-desktop@1x.webp") type("image/webp") 1x,

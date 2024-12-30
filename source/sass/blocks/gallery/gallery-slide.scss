@@ -35,6 +35,9 @@
   .gallery-slide {
     width: 252px;
     height: 422px;
+    &--extra {
+      gap: 2px;
+    }
   }
 }
 
