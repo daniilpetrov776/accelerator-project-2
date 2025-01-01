@@ -11,7 +11,9 @@
   padding: 10px 48px;
   color: $primary;
   text-decoration: none;
+
   @include apply-styles($mobile-button-big);
+
   width: 100%;
   cursor: pointer;
   gap: 6px;
@@ -20,18 +22,22 @@
   &:hover {
     color: rgba(2, 102, 193, 0.1);
   }
+
   &:focus-visible {
     color: #0266c1;
     outline: none;
   }
+
   &:active {
     color: $active;
   }
+
   &:disabled {
     color: $disabled;
     pointer-events: none;
     cursor: auto;
   }
+
   &--disabled {
     color: $disabled;
     pointer-events: none;
@@ -90,6 +96,7 @@
 @media #{$not-mobile} {
   .full-width-link__link {
     @include apply-styles($desktop-button-big);
+
     position: relative;
   }
 }

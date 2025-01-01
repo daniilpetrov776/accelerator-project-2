@@ -41,9 +41,11 @@
   flex-flow: wrap;
   align-items: flex-start;
   gap: 10px;
+
   p {
     margin: 0;
     width: 250px;
+
     @include apply-styles($mobile-text-small);
   }
 }
@@ -58,17 +60,19 @@
 .reviews-slide__title {
   margin: 0;
   width: 100%;
+
   @include apply-styles($mobile-caption-big);
 }
 
 .reviews-slide__subtitle {
   margin: 0;
+
   @include apply-styles($mobile-caption-small);
 }
 
 @media #{$not-mobile} {
   .reviews-slide {
-    box-shadow:  0 0 30px 0 rgba(28, 51, 116, 0.1);
+    box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
     gap: 30px;
     width: 565px;
     height: 277px;
@@ -83,9 +87,11 @@
   .reviews-slide__text-wrapper {
     gap: 10px;
     padding: 3px 0 0;
+
     p {
       margin: 0;
       width: 299px;
+
       @include apply-styles($text-xsmal);
     }
   }
@@ -100,13 +106,14 @@
 
   .reviews-slide__subtitle {
     margin: 0;
+
     @include apply-styles($tablet-caption-small);
   }
 }
 
 @media #{$desktop-only} {
   .reviews-slide {
-    box-shadow: 0 0 20px 0 #1c33741a;
+    box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
     padding: 20px 40px 20px 20px;
     width: 700px;
     height: 293px;
@@ -122,8 +129,10 @@
 
   .reviews-slide__text-wrapper {
     padding: 0;
+
     p {
       width: 100%;
+
       @include apply-styles($desktop-text-small);
     }
   }

@@ -7,9 +7,7 @@
 
 .process__title {
   @include apply-styles($mobile-h5);
-}
 
-.process__title {
   margin: 0;
 }
 
@@ -35,12 +33,13 @@
 
 .process__item {
   @include apply-styles($mobile-text-small);
+
   padding: 0 0 0 63px;
   max-width: 274px;
   position: relative;
 
   &--obstacles {
-    padding:  0 10px 0 63px;
+    padding: 0 10px 0 63px;
   }
 
   &::before {
@@ -67,12 +66,15 @@
   &--direction::after {
     background: url("/__spritemap#sprite-map-view") center center no-repeat;
   }
+
   &--gear::after {
     mask: url("/__spritemap#sprite-boots-view") center center no-repeat;
   }
+
   &--environment::after {
     background: url("/__spritemap#sprite-forest-view") center center no-repeat;
   }
+
   &--obstacles::after {
     background: url("/__spritemap#sprite-mountain-view") center center no-repeat;
   }
@@ -89,6 +91,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 104px 134px;
+
     &::before {
       background: transparent;
     }
@@ -96,8 +99,10 @@
 
   .process__item {
     @include apply-styles($tablet-text-small);
+
     max-width: 272px;
     padding: 0 10px 0 35px;
+
     &::before {
       background: transparent;
     }
@@ -135,8 +140,10 @@
 
   .process__title {
     margin: 36px 0 0;
+
     @include apply-styles($desktop-h5);
   }
+
   .process__list {
     display: flex;
     width: 100%;
@@ -154,6 +161,7 @@
 
   .process__item {
     @include apply-styles($desktop-text-regular);
+
     max-width: 253px;
     min-height: 102px;
     padding: 5px 5px 0 45px;

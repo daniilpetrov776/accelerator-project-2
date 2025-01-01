@@ -5,6 +5,7 @@
   padding: 15px 0 1px;
   position: relative;
   overflow: visible;
+
   --offset: 0;
 
   &::after {
@@ -15,7 +16,7 @@
     width: 100%;
     left: 0;
     top: 100%;
-    background: #0266C1;
+    background: #0266c1;
     z-index: 9;
     transition: max-height 0.3s $smooth;
   }
@@ -46,7 +47,9 @@
 .header__phone {
   color: $white;
   text-decoration: none;
+
   @include apply-styles($mobile-h6);
+
   margin: 0 5px 0 0;
   transition: color 0.3s $smooth;
   position: relative;

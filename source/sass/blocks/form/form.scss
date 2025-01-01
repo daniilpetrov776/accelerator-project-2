@@ -8,21 +8,21 @@
   flex-flow: wrap column;
   gap: 20px;
   align-items: center;
-  padding: 176px 0 0 0;
+  padding: 176px 0 0;
   width: 320px;
   min-height: 638px;
   background:
-  image-set(
-    url("../../../img/form/forest-mobile@1x.webp") type("image/webp") 1x,
-    url("../../../img/form/forest-mobile@2x.webp") type("image/webp") 2x,
-    url("../../../img/form/forest-mobile@1x.png") type("image/png") 1x,
-    url("../../../img/form/forest-mobile@2x.png") type("image/png") 2x
-);
-    background-color: rgba(0, 0, 0, 0.2);
-    background-size: cover;
-    background-position: left;
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+    image-set(
+      url("../../../img/form/forest-mobile@1x.webp") type("image/webp") 1x,
+      url("../../../img/form/forest-mobile@2x.webp") type("image/webp") 2x,
+      url("../../../img/form/forest-mobile@1x.png") type("image/png") 1x,
+      url("../../../img/form/forest-mobile@2x.png") type("image/png") 2x
+    );
+  background-color: rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: left;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
 }
 
 .form__content-wrapper {
@@ -34,14 +34,17 @@
   text-align: center;
   position: relative;
   top: 1px;
+
   h2 {
     @include apply-styles($mobile-h3);
+
     margin: 0;
     width: 100%;
   }
 
   p {
     @include apply-styles($mobile-text-small);
+
     margin: 0 auto;
   }
 }
@@ -64,12 +67,14 @@
 
 .form__label {
   position: absolute;
+
   @include apply-styles($desktop-button-input-regular);
+
   color: $primary;
-  opacity: 0.5;
   top: 50%;
   transform: translateY(-50%);
   left: 15px;
+  opacity: 0.5;
 }
 
 .form__input {
@@ -77,15 +82,17 @@
   width: 100%;
   padding: 13px 15px;
   font-family: inherit;
+
   @include apply-styles($desktop-button-input-regular);
-  border: solid 1px #0266C11A;
+
+  border: solid 1px rgba(2, 102, 193, 0.1);
   transition: border 0.3s $smooth;
   border-radius: 2px;
   color: rgb(45, 56, 63, 0.5);
 }
 
 .form__input:hover {
-  border-color: #0266C1;
+  border-color: #0266c1;
 }
 
 .form__input:focus {
@@ -94,7 +101,7 @@
 }
 
 .form__input--invalid {
-  border-color: #FF121F;
+  border-color: #ff121f;
 }
 
 .form__input:disabled {
@@ -109,10 +116,6 @@
 }
 
 .form__input:focus::placeholder {
-  opacity: 0.5;
-}
-
-.form__label {
   opacity: 0.5;
 }
 
@@ -137,39 +140,42 @@
 @media #{$not-mobile} {
   .form {
     min-height: 680px;
-}
-
-.form__content-wrapper {
-  gap: 25px;
-  width: 360px;
-  top: 10px;
-  h2 {
-    @include apply-styles($tablet-h3);
   }
 
-  p {
-    position: relative;
-    top: -1px;
-    @include apply-styles($tablet-text-regular);
-    margin: 0;
+  .form__content-wrapper {
+    gap: 25px;
+    width: 360px;
+    top: 10px;
+
+    h2 {
+      @include apply-styles($tablet-h3);
+    }
+
+    p {
+      position: relative;
+      top: -1px;
+
+      @include apply-styles($tablet-text-regular);
+
+      margin: 0;
+    }
+
+    br {
+      display: none;
+    }
   }
 
-  br {
-    display: none;
-  }
-}
-
-.form__wrapper {
-  width: 768px;
-  min-height: 680px;
-  gap: 22px;
-  background:
-  image-set(
-    url("../../../img/form/forest-tablet@1x.webp") type("image/webp") 1x,
-    url("../../../img/form/forest-tablet@2x.webp") type("image/webp") 2x,
-    url("../../../img/form/forest-tablet@1x.png") type("image/png") 1x,
-    url("../../../img/form/forest-tablet@2x.png") type("image/png") 2x
-    );
+  .form__wrapper {
+    width: 768px;
+    min-height: 680px;
+    gap: 22px;
+    background:
+      image-set(
+        url("../../../img/form/forest-tablet@1x.webp") type("image/webp") 1x,
+        url("../../../img/form/forest-tablet@2x.webp") type("image/webp") 2x,
+        url("../../../img/form/forest-tablet@1x.png") type("image/png") 1x,
+        url("../../../img/form/forest-tablet@2x.png") type("image/png") 2x
+      );
     background-color: rgba(0, 0, 0, 0.2);
   }
 
@@ -182,6 +188,7 @@
     width: 100%;
     padding: 15px 30px;
     font-family: inherit;
+
     @include apply-styles($desktop-button-input-regular);
   }
 
@@ -207,12 +214,14 @@
   .form__content-wrapper {
     gap: 20px;
     width: 1360px;
+
     h2 {
       @include apply-styles($desktop-h3);
     }
 
     p {
       @include apply-styles($desktop-text-regular);
+
       margin: 0;
       width: 100%;
     }
@@ -221,16 +230,16 @@
   .form__wrapper {
     width: 1440px;
     min-height: 760px;
-    padding:  286px 0 0 0;
+    padding: 286px 0 0;
     gap: 36px;
     background:
-    image-set(
-      url("../../../img/form/forest-desktop@1x.webp") type("image/webp") 1x,
-      url("../../../img/form/forest-desktop@2x.webp") type("image/webp") 2x,
-      url("../../../img/form/forest-desktop@1x.png") type("image/png") 1x,
-      url("../../../img/form/forest-desktop@2x.png") type("image/png") 2x
-  );
-  background-color: rgba(0, 0, 0, 0.2);
+      image-set(
+        url("../../../img/form/forest-desktop@1x.webp") type("image/webp") 1x,
+        url("../../../img/form/forest-desktop@2x.webp") type("image/webp") 2x,
+        url("../../../img/form/forest-desktop@1x.png") type("image/png") 1x,
+        url("../../../img/form/forest-desktop@2x.png") type("image/png") 2x
+      );
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .form__input {

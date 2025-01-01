@@ -12,13 +12,12 @@
 }
 
 .training-slide__content-wrapper {
-  display: flex;
-  flex-flow: wrap;
-  gap: 15px;
+  display: block;
   height: 111px;
 
-  h5 {
+  h4 {
     @include apply-styles($h7);
+
     max-width: 60%;
     margin: 0;
     position: relative;
@@ -26,8 +25,9 @@
 
   p {
     @include apply-styles($text-xsmal);
+
     line-height: 16px;
-    margin: 0;
+    margin: 15px 0 0;
   }
 
   span {
@@ -42,45 +42,44 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+}
 
-  a {
+.training-slide__content-wrapper a {
+  width: 24px;
+  height: 24px;
+  border: solid 1px rgba(45, 56, 63, 0.3);
+  position: relative;
+  transition: border 0.3s $smooth, background 0.3s $smooth;
+
+  &::after {
+    position: absolute;
+    content: "";
     width: 24px;
     height: 24px;
-    border: solid 1px rgba(45, 56, 63, 0.3);
-    position: relative;
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $primary;
+    mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
+    transition: background 0.3s $smooth;
+  }
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 24px;
-      height: 24px;
-      left: -2px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: $primary;
-      mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
-      transition: background 0.3s $smooth;
-    }
+  &:hover {
+    border-color: $primary;
+  }
 
-    transition: border 0.3s $smooth, background 0.3s $smooth;
+  &:focus-visible {
+    border-color: transparent;
+    outline: none;
+  }
 
-    &:hover {
-      border-color: $primary;
-    }
+  &:active {
+    background-color: #0266c1;
+    border-color: #0266c1;
+  }
 
-    &:focus-visible {
-      border-color: transparent;
-      outline: none;
-    }
-
-    &:active {
-      background-color: #0266c1;
-      border-color: #0266c1;
-    }
-
-    &:active::after {
-      background-color: $white;
-    }
+  &:active::after {
+    background-color: $white;
   }
 }
 
@@ -124,13 +123,6 @@
   height: min-content;
 }
 
-.training-slide__content-wrapper {
-  display: block;
-  p {
-    margin: 15px 0 0 0;
-  }
-}
-
 @media #{$not-mobile} {
   .training-slide {
     width: 213px;
@@ -142,6 +134,7 @@
 
     p {
       @include apply-styles($text-xsmal);
+
       line-height: 16px;
     }
   }
@@ -158,7 +151,7 @@
     height: 111px;
   }
 
-  .training-slide__content-wrapper h5 {
+  .training-slide__content-wrapper h4 {
     max-width: 55%;
   }
 }

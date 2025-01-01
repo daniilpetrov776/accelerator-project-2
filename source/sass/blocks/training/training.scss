@@ -7,13 +7,15 @@
   display: flex;
   flex-flow: wrap;
   align-items: flex-start;
-  gap: 25px
+  gap: 25px;
 }
 
 .training__header-title {
   margin: 0;
   position: relative;
   top: 3px;
+
+  @include apply-styles($mobile-h3);
 }
 
 .training__title {
@@ -36,13 +38,9 @@
   overflow: hidden;
 }
 
-.training__header-title{
-  @include apply-styles($mobile-h3)
-}
-
-
-.training__text-wrapper p{
+.training__text-wrapper p {
   @include apply-styles($mobile-text-regular);
+
   width: 290px;
   margin: 0;
 }
@@ -72,25 +70,25 @@
   }
 
   .training__header-title {
-    @include apply-styles($tablet-h3)
+    @include apply-styles($tablet-h3);
+
+    min-height: 35px;
+    margin: 0 0 5px;
   }
 
 
-  .training__text-wrapper p{
+  .training__text-wrapper p {
     position: relative;
     top: -2px;
+
     @include apply-styles($tablet-text-regular);
+
     width: 100%;
     text-align: left;
   }
 
   .training__text-wrapper br {
     display: block;
-  }
-
-  .training__header-title {
-    min-height: 35px;
-    margin: 0 0 5px 0;
   }
 }
 
@@ -99,7 +97,7 @@
     min-height: 889px;
   }
 
-  .training__title  {
+  .training__title {
     width: 100%;
   }
 
@@ -115,8 +113,9 @@
     align-items: flex-end;
   }
 
-  .training__text-wrapper p{
+  .training__text-wrapper p {
     width: 820px;
+
     @include apply-styles($desktop-text-regular);
   }
 
@@ -126,11 +125,11 @@
 
   .training__header-title {
     @include apply-styles($desktop-h3);
-    margin: 36px 0 0 0;
+
+    margin: 36px 0 0;
   }
 
   .training__swiper {
     width: 1200px;
   }
-
 }

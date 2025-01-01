@@ -24,7 +24,7 @@
         <button class="header__burger-button burger-button" type="button" tabindex="0" aria-label="Меню Навигации.">
           <span class="burger-button__contents"></span>
         </button>
-        <nav class="header__header-nav header-nav header-nav--is-closed">
+        <nav class="header__header-nav header-nav header-nav--is-closed" aria-label="Меню навигации по сайту.">
           <ul class="header-nav__list">
             <li class="header-nav__item">
               <a class="header-nav__link" href="#tours">Туры</a>
@@ -390,8 +390,8 @@
                 </div>
                 <div class="training-slide__content-wrapper">
                   <div>
-                    <h5>Александр
-                      Прокофьев</h5>
+                    <h4>Александр
+                      Прокофьев</h4>
                       <a class="training-slide__link" href="#">
                         <span>Социальные сети тренера.</span>
                       </a>
@@ -412,8 +412,8 @@
                 </div>
                 <div class="training-slide__content-wrapper">
                   <div>
-                    <h5>Светлана
-                      Афиногенова</h5>
+                    <h4>Светлана
+                      Афиногенова</h4>
                     <a class="training-slide__link" href="#">
                       <span>Социальные сети тренера.</span>
                     </a>
@@ -434,8 +434,8 @@
                 </div>
                 <div class="training-slide__content-wrapper">
                   <div>
-                    <h5>Надежда
-                      Колесниченко</h5>
+                    <h4>Надежда
+                      Колесниченко</h4>
                     <a class="training-slide__link" href="#">
                       <span>Социальные сети тренера.</span>
                     </a>
@@ -456,8 +456,8 @@
                 </div>
                 <div class="training-slide__content-wrapper">
                   <div>
-                    <h5>Федор
-                      Кайгородов</h5>
+                    <h4>Федор
+                      Кайгородов</h4>
                     <a class="training-slide__link" href="#">
                       <span>Социальные сети тренера.</span>
                     </a>
@@ -478,8 +478,8 @@
                 </div>
                 <div class="training-slide__content-wrapper">
                   <div>
-                    <h5>Даниэль
-                      Васнецов</h5>
+                    <h4>Даниэль
+                      Васнецов</h4>
                     <a class="training-slide__link" href="#">
                       <span>Социальные сети тренера.</span>
                     </a>
@@ -537,7 +537,7 @@
         <div class="container container--full-width reviews__wrapper">
           <div class="reviews__reviews-header slider-header">
             <div class="slider-header__title-wrapper reviews__slider-header-wrapper">
-              <h2 class="slider-header__title reviews__slider-header__title section-title" data-shadow="Отзывы">Отзывы</h2>
+              <h2 class="slider-header__title reviews__slider-header-title section-title" data-shadow="Отзывы">Отзывы</h2>
             </div>
             <div class="slider-header__navigation swiper-navigation swiper-navigation--reviews">
                 <button class="slider-header__swiper-button--prev swiper-button--prev slider-header__swiper-button swiper-button--reviews-prev swiper-button" tabindex="0" type="button">
@@ -631,7 +631,7 @@
                 </div>
                 <div class="reviews-slide__content-wrapper">
                   <div class="reviews-slide__text-wrapper">
-                    <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину. </p>
+                    <p>Это был опыт, изменивший мою жизнь! Думала, не справлюсь, но все получилось! Дух захватывает, когда наконец‑то, преодолев все трудности и препятствия, взбираешься на вершину.</p>
                     <p>У нас собралась потрясающая команда. Все друг друга поддерживали, по вечерам мы сидели вместе у костра и пели песни. Обязательно повторю такое приключение!</p>
                   </div>
                   <div class="reviews-slide__title-wrapper">
@@ -814,7 +814,7 @@
               <input class="form__input form__input--email" type="text" id="email" name="email" placeholder="ivanivanov@gmail.com" required>
               <label class="form__label" for="email">Email</label>
             </div>
-            <button class="button form__submit-button">
+            <button class="button form__submit-button" type="submit">
               <span class="form__submit-button-text button__text">Отправить</span>
             </button>
           </form>
@@ -861,7 +861,7 @@
               <img class="bottom__logo" width="142" height="42" src="./img/logo/logo-dark.svg" alt="Логотип туристической компании.">
             </a>
           </div>
-          <nav class="bottom__bottom-nav bottom-nav">
+          <nav class="bottom__bottom-nav bottom-nav" aria-label="Вернуться к.">
             <ul class="bottom-nav__list">
               <li class="bottom-nav__item">
                 <a class="bottom-nav__link" href="#tours">Туры</a>
@@ -888,13 +888,19 @@
           <a class="bottom__phone" href="tel:+78007253232">8 800 725-32-32</a>
           <ul class="bottom__socials socials">
             <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="https://htmlacademy.ru/profession/fullstack"></a>
+              <a class="socials__link socials__link--vk" href="https://htmlacademy.ru/profession/fullstack">
+                <span class="visually-hidden">Мы в ВК.</span>
+              </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--ok" href="https://htmlacademy.ru/intensive/nodejs"></a>
+              <a class="socials__link socials__link--ok" href="https://htmlacademy.ru/intensive/nodejs">
+                <span class="visually-hidden">Мы в Одноклассниках.</span>
+              </a>
             </li>
             <li class="socials__item">
-              <a class="socials__link socials__link--reddit" href="https://htmlacademy.ru/intensive/ecmascript"></a>
+              <a class="socials__link socials__link--reddit" href="https://htmlacademy.ru/intensive/ecmascript">
+                <span class="visually-hidden">Мы на Реддит.</span>
+              </a>
             </li>
           </ul>
           <a class="bottom__policy policy" href="#">Политика конфиденциальности</a>

@@ -1,6 +1,6 @@
 .adv {
   min-height: 1438px;
-  padding: 36px 0 20px 0;
+  padding: 36px 0 20px;
 }
 
 .adv__wrapper {
@@ -28,6 +28,7 @@
   justify-content: center;
   text-align: center;
   margin: 2px 0 36px;
+
   &::before {
     top: -14px;
     left: 0;
@@ -41,7 +42,7 @@
 @media #{$not-mobile} {
   .adv {
     min-height: 1265px;
-    padding: 60px 0 40px 0;
+    padding: 60px 0 40px;
   }
 
   .adv__wrapper {
@@ -50,8 +51,9 @@
 
   .adv__title {
     width: 100%;
-    top:  0;
-    margin: 0 0 50px 0;
+    top: 0;
+    margin: 0 0 50px;
+
     &::before {
       top: -15px;
     }
@@ -70,7 +72,7 @@
 @media #{$desktop-only} {
   .adv {
     min-height: 734px;
-    padding: 135px 0 100px 0;
+    padding: 135px 0 100px;
   }
 
   .adv__wrapper {
@@ -80,6 +82,7 @@
 
   .adv__title {
     margin: 0;
+
     &::before {
       top: -29px;
     }

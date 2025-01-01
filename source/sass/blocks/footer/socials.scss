@@ -6,20 +6,12 @@
   gap: 16px;
 }
 
-// .socials__item {
-//   width: 30px;
-//   height: 30px;
-//   border: 1px solid #2D383F4D;
-// }
-
 .socials__link {
-  width: 100%;
-  height: 100%;
   display: block;
   position: relative;
   width: 30px;
   height: 30px;
-  border: 1px solid #2D383F4D;
+  border: 1px solid rgba(45, 56, 63, 0.3);
   transition: border 0.3s $smooth, background 0.3s $smooth;
 
   &::before {
@@ -65,11 +57,13 @@
   &--vk::before {
     mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
   }
+
   &--ok::before {
     width: 9px;
     height: 16px;
     mask: url("/__spritemap#sprite-ok-view") center center no-repeat;
   }
+
   &--reddit::before {
     width: 14px;
     height: 15px;

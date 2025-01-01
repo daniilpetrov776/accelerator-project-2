@@ -17,6 +17,7 @@
   display: flex;
   align-content: center;
   flex-flow: wrap;
+
   &::before {
     top: 2px;
   }
@@ -30,7 +31,9 @@
 .gallery__content-wrapper {
   p {
     margin: 0;
+
     @include apply-styles($mobile-text-small);
+
     padding: 0 20px 0 0;
   }
 }
@@ -89,8 +92,10 @@
     align-items: flex-end;
     justify-content: space-between;
     flex-flow: wrap;
+
     p {
       @include apply-styles($tablet-text-small);
+
       width: 420px;
       padding: 0 30px 0 0;
     }
@@ -98,7 +103,6 @@
 }
 
 @media #{$desktop-only} {
-
   .gallery {
     min-height: 741px;
     padding: 100px 0 0;
@@ -110,6 +114,7 @@
 
   .gallery__slider-header {
     gap: 26px;
+    padding: 0 120px;
   }
 
   .gallery__title {
@@ -120,13 +125,9 @@
     width: 1440px;
   }
 
-  .gallery__swiper-wrapper  {
+  .gallery__swiper-wrapper {
     flex-flow: wrap;
     gap: 5px;
-  }
-
-  .gallery__slider-header {
-    padding: 0 120px;
   }
 
   .gallery__slider-nav {
@@ -137,8 +138,10 @@
     br {
       display: none;
     }
+
     p {
       @include apply-styles($desktop-text-regular);
+
       width: 100%;
       padding: 0 300px 0 0;
     }

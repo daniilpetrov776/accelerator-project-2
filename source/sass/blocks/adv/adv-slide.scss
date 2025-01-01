@@ -59,15 +59,18 @@
   width: 270px;
   position: relative;
   top: -2px;
+
   h3 {
     @include apply-styles($mobile-h6);
+
     margin: 0;
     padding: 0 22px;
-    font-weight: 600
+    font-weight: 600;
   }
 
   p {
     @include apply-styles($mobile-text-small);
+
     margin: 0;
     width: 270px;
   }
@@ -91,8 +94,10 @@
   .adv-slide__content-wrapper {
     width: 284px;
     top: -1px;
+
     h3 {
       @include apply-styles($tablet-h6);
+
       padding: 0;
       position: relative;
       top: 2px;
@@ -107,11 +112,9 @@
       top: 1px;
     }
   }
-
 }
 
 @media #{$desktop-only} {
-
   .adv-slide {
     width: 380px;
     height: 329px;
@@ -128,9 +131,11 @@
   .adv-slide__content-wrapper {
     text-align: center;
     width: 340px;
+
     h3 {
       @include apply-styles($desktop-h6);
     }
+
     p {
       width: 340px;
     }

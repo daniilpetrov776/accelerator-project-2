@@ -1,5 +1,6 @@
 .policy {
   @include apply-styles($mobile-caption-small);
+
   color: $primary;
   text-decoration: none;
   padding: 5px 0;
@@ -33,7 +34,7 @@
   }
 
   &:focus-visible::before {
-  opacity: 1;
+    opacity: 1;
   }
 
   &--disabled {

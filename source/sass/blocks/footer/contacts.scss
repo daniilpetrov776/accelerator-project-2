@@ -4,11 +4,11 @@
   flex-flow: wrap column;
   align-items: flex-start;
   gap: 30px;
-  padding: 16px 0 20px 0;
+  padding: 16px 0 20px;
 }
 
 .contacts__info-wrapper {
-  padding: 0 15px 0 15px;
+  padding: 0 15px;
   display: flex;
   flex-flow: wrap;
   align-items: flex-start;
@@ -16,7 +16,7 @@
   max-width: 320px;
 }
 
-.contacts__title  {
+.contacts__title {
   margin: 0;
   top: 0;
 
@@ -28,6 +28,7 @@
 .contacts__content-wrapper {
   p {
     margin: 0;
+
     @include apply-styles($mobile-text-regular);
   }
 }
@@ -58,15 +59,17 @@
     width: 22px;
     height: 22px;
     left: 0;
-    background-color: #2D383F;
+    background-color: #2d383f;
   }
 
   &--phone::before {
     mask: url("/__spritemap#sprite-phone-view") center center no-repeat;
   }
+
   &--email::before {
     mask: url("/__spritemap#sprite-mail-view") center center no-repeat;
   }
+
   &--adress::before {
     mask: url("/__spritemap#sprite-marker-stroke-view") center center no-repeat;
   }
@@ -74,6 +77,7 @@
 
 .contacts__contacts-list-item-name {
   @include apply-styles($mobile-h6);
+
   font-weight: 600;
   margin: 0;
 }
@@ -81,7 +85,9 @@
 .contacts__contacts-link {
   color: $primary;
   text-decoration: none;
+
   @include apply-styles($mobile-text-regular);
+
   margin: 0;
   position: relative;
   transition: color 0.3s $smooth;
@@ -155,8 +161,10 @@
   .contacts__content-wrapper {
     position: relative;
     top: 1px;
+
     p {
       @include apply-styles($tablet-text-regular);
+
       width: 480px;
     }
   }
@@ -180,6 +188,7 @@
 
   .contacts__contacts-list-item-name {
     @include apply-styles($tablet-h6);
+
     font-weight: 600;
   }
 
@@ -210,6 +219,7 @@
   .contacts__content-wrapper {
     p {
       @include apply-styles($desktop-text-regular);
+
       width: 500px;
     }
   }
@@ -228,12 +238,13 @@
       top: 50%;
       transform: translateY(-50%);
       width: 26px;
-      height: 26px
+      height: 26px;
     }
   }
 
   .contacts__contacts-list-item-name {
     @include apply-styles($desktop-h6);
+
     font-weight: 600;
   }
 

@@ -1,6 +1,6 @@
 .bottom {
   min-height: 268px;
-  padding: 2px 15px 10px 15px;
+  padding: 2px 15px 10px;
   display: flex;
   flex-flow: wrap column;
   align-items: center;
@@ -12,7 +12,7 @@
     position: absolute;
     content: "";
     width: 100vw;
-    left: calc((100vw - 100%) / -2) ;
+    left: calc((100vw - 100%) / -2);
     height: 1px;
     background-color: $primary;
     top: -23px;
@@ -24,12 +24,12 @@
   display: none;
 }
 
-.bottom__socials  {
+.bottom__socials {
   margin: 0;
 }
 
 .bottom__policy {
-  margin: auto 0 0 0;
+  margin: auto 0 0;
 }
 
 .bottom__logo-link {
@@ -48,6 +48,7 @@
     transition: transform 0.3s $smooth;
     transform-origin: left;
   }
+
   &:hover {
     opacity: 0.5;
   }
@@ -68,7 +69,7 @@
 @media #{$not-mobile} {
   .bottom {
     min-height: 186px;
-    padding: 0 45px 20px 45px;
+    padding: 0 45px 20px;
     flex-flow: wrap row;
     justify-content: space-between;
     align-items: flex-start;
@@ -83,7 +84,7 @@
 @media #{$desktop-only} {
   .bottom {
     min-height: 210px;
-    padding: 32px 120px 32px 120px;
+    padding: 32px 120px;
     gap: 17px;
 
     &::before {
@@ -94,13 +95,15 @@
   .bottom__phone {
     display: block;
     color: $primary;
+
     @include apply-styles($desktop-h6);
+
     text-decoration: none;
     padding: 21px 0;
     transition: color 0.3s $smooth;
 
     &:hover {
-      color: #0266c11a;
+      color: rgba(2, 102, 193, 0.1);
     }
 
     &:focus-visible {
@@ -130,8 +133,8 @@
     padding: 0 0 0 29px;
   }
 
-  .bottom__socials  {
-    margin: 5px 0 0 0;
+  .bottom__socials {
+    margin: 5px 0 0;
   }
 
   .bottom__logo-link {
