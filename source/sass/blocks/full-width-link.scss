@@ -45,23 +45,23 @@
   }
 }
 
-.full-width-link__link:hover .full-width-link__arrow::before {
+.full-width-link__link:hover .full-width-link__content::before {
   background: rgba(2, 102, 193, 0.1);
 }
 
-.full-width-link__link:focus-visible .full-width-link__arrow::before {
+.full-width-link__link:focus-visible .full-width-link__content::before {
   background: #0266c1;
 }
 
-.full-width-link__link:active .full-width-link__arrow::before {
+.full-width-link__link:active .full-width-link__content::before {
   background: $active;
 }
 
-.full-width-link__link:disabled .full-width-link__arrow::before {
+.full-width-link__link:disabled .full-width-link__content::before {
   background: $disabled;
 }
 
-.full-width-link__link--disabled .full-width-link__arrow::before {
+.full-width-link__link--disabled .full-width-link__content::before {
   background: $disabled;
 }
 
@@ -73,12 +73,29 @@
   margin: 0 0 0 6px;
   left: -2px;
 
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 12px;
+  //   height: 12px;
+  //   left: 0;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   background: $primary;
+  //   mask: url("/__spritemap#sprite-arrow-right-view") center center no-repeat;
+  //   transition: background 0.3s $smooth;
+  // }
+}
+
+.full-width-link__content {
+  position: relative;
+
   &::before {
     position: absolute;
     content: "";
-    width: 12px;
-    height: 12px;
-    left: 0;
+    width: 14px;
+    height: 14px;
+    right: -23px;
     top: 50%;
     transform: translateY(-50%);
     background: $primary;
@@ -90,14 +107,15 @@
 @media #{$not-mobile} {
   .full-width-link__link {
     @include apply-styles($tablet-button-big);
+    position: relative;
+    left: -9px;
+    top: 1px;
   }
 }
 
-@media #{$not-mobile} {
+@media #{$desktop-only} {
   .full-width-link__link {
     @include apply-styles($desktop-button-big);
-
-    position: relative;
   }
 }
 

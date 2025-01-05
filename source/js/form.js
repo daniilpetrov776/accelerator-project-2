@@ -1,11 +1,11 @@
-import { calculateCursor } from './utils';
+import { calculateCursor, validateEmail, validatePhone } from './utils';
 
 const formInputs = document.querySelectorAll('.form__input');
 const form = document.querySelector('.form__form-field');
 const emailInput = document.querySelector('.form__input--email');
 const phoneInput = document.querySelector('.form__input--phone');
 
-export const handleFormTextVisibility = () => {
+export const handleFormLabelVisibility = () => {
   formInputs.forEach((input) => {
     input.addEventListener('change', () => {
       const label = input.nextElementSibling;
@@ -14,14 +14,6 @@ export const handleFormTextVisibility = () => {
       }
     });
   });
-};
-
-const validateEmail = (email) => {
-  const latinEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(?:[a-zA-Z]{2,})$/;
-
-  const cyrillicEmailRegex = /^[а-яА-ЯёЁ0-9._%+-]+@[а-яА-ЯёЁ0-9.-]+\.(?:рф)$/;
-
-  return latinEmailRegex.test(email) || cyrillicEmailRegex.test(email);
 };
 
 const clearFormFields = () => {
@@ -33,49 +25,106 @@ const clearFormFields = () => {
 };
 
 const formSumbitHandler = (evt) => {
-  evt.preventDefault();
+  let isFormValid = true;
+  let firstInvalidInput = null;
+
   formInputs.forEach((input) => {
     input.classList.remove('form__input--invalid');
-  });
+    input.setCustomValidity('');
 
-  let isFormValid = true;
-  let IsEmailValid = true;
-
-  formInputs.forEach((input) => {
     if (!input.validity.valid) {
       input.classList.add('form__input--invalid');
       isFormValid = false;
     }
   });
 
-  IsEmailValid = validateEmail(emailInput.value);
-
-  if (!IsEmailValid) {
-    emailInput.classList.add('form__input--invalid');
+  if (!validatePhone(phoneInput.value)) {
+    phoneInput.classList.add('form__input--invalid');
     isFormValid = false;
+    phoneInput.setCustomValidity('Пожалуйста, введите номер телефона в указанном формате: +7 (000)-000-00-00.');
+    if (!firstInvalidInput) {
+      firstInvalidInput = phoneInput;
+    }
   }
 
-  if (isFormValid) {
-    form.submit();
+  if (!validateEmail(emailInput.value)) {
+    emailInput.classList.add('form__input--invalid');
+    isFormValid = false;
+    emailInput.setCustomValidity('Пожалуйста, заполните адрес почты в корректном формате.');
+    emailInput.reportValidity();
+    if (!firstInvalidInput) {
+      firstInvalidInput = emailInput;
+    }
+  }
+
+  if (firstInvalidInput) {
+    firstInvalidInput.reportValidity();
+  }
+
+  formInputs.forEach((input) => {
+    if (!input.value) {
+      input.classList.add('form__input--invalid');
+      isFormValid = false;
+    }
+  });
+
+  if (!isFormValid) {
+    evt.preventDefault();
   }
 };
 
-const inputChangeHandler = (evt) => {
+const handleInputEvent = (evt) => {
   const input = evt.target;
+
   if (input.value.length === 0) {
     input.classList.remove('form__input--invalid');
+    input.setCustomValidity('');
+    return;
+  }
+
+  if (input === emailInput && validateEmail(input.value)) {
+    input.classList.remove('form__input--invalid');
+    input.setCustomValidity('');
+  } else if (input === phoneInput && validatePhone(input.value)) {
+    input.classList.remove('form__input--invalid');
+    input.setCustomValidity('');
   }
 };
 
 const handleInputsChange = () => {
   formInputs.forEach((input) => {
-    input.addEventListener('input', inputChangeHandler);
-    input.addEventListener('focus', inputChangeHandler);
+    input.addEventListener('input', handleInputEvent);
+    input.addEventListener('focus', handleInputEvent);
+    input.addEventListener('change', handleInputEvent);
   });
 };
 
-const formatPhoneNumber = () => {
+const moveCursorBetweenGroups = (input, direction) => {
+  const cursorPosition = input.selectionStart;
 
+  const groups = [...input.value.matchAll(/\d+/g)].map((match) => ({
+    start: match.index,
+    end: match.index + match[0].length,
+  }));
+
+  if (direction === 'right') {
+    for (const group of groups) {
+      if (group.start > cursorPosition) {
+        input.setSelectionRange(group.start, group.start);
+        break;
+      }
+    }
+  } else if (direction === 'left') {
+    for (let i = groups.length - 1; i >= 0; i--) {
+      if (groups[i].end < cursorPosition) {
+        input.setSelectionRange(groups[i].start, groups[i].start);
+        break;
+      }
+    }
+  }
+};
+
+const formatPhoneNumber = () => {
 
   phoneInput.addEventListener('input', (evt) => {
     const input = evt.target;
@@ -122,11 +171,18 @@ const formatPhoneNumber = () => {
     const newCursorPosition = calculateCursor(cursorPosition, rawValue, input.value);
     input.setSelectionRange(newCursorPosition, newCursorPosition);
   });
+  phoneInput.addEventListener('keydown', (evt) => {
+    if (evt.ctrlKey && (evt.key === 'ArrowRight' || evt.key === 'ArrowLeft')) {
+      evt.preventDefault();
+      const direction = evt.key === 'ArrowRight' ? 'right' : 'left';
+      moveCursorBetweenGroups(evt.target, direction);
+    }
+  });
 };
 
 export const handleFormValidation = () => {
   form.addEventListener('submit', formSumbitHandler);
-  handleFormTextVisibility();
+  handleFormLabelVisibility();
   handleInputsChange();
   formatPhoneNumber();
   clearFormFields();

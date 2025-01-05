@@ -92,6 +92,10 @@
   position: relative;
   transition: color 0.3s $smooth;
 
+  &--text {
+    pointer-events: none;
+  }
+
   &::before {
     position: absolute;
     content: "";
