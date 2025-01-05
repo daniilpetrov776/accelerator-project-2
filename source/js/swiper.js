@@ -282,13 +282,6 @@ export const handleAdvSwiper = () => {
     'resize',
     throttle(() => initAdvSwiper(), 200)
   );
-  // advSwiper.on('slideChange', () => {
-  //   console.log('Slide changed', advSwiper.activeIndex);
-  // });
-
-  // advSwiper.on('loopFix', () => {
-  //   console.log('Loop fixed');
-  // });
 };
 
 

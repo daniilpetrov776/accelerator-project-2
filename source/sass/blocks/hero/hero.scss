@@ -43,10 +43,11 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  padding: 0 0 100px 0;
 }
 
 .hero__slide-content-wrapper {
-  padding: 40px 15px;
+  padding: 40px 15px 0 15px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -329,6 +330,7 @@
 
   .hero__slide {
     align-items: flex-start;
+    padding: 0;
   }
 
   .hero__slide-content-wrapper {

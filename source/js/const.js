@@ -1,3 +1,5 @@
+export const HEADER_MENU_PADDING = 30;
+
 export const Screen = {
   desktop: 1440,
   tablet: 768,
