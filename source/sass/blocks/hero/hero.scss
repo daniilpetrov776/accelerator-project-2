@@ -156,6 +156,7 @@
 
 .swiper-horizontal > .swiper-pagination-bullets .hero__swiper-pagination-bullet {
   margin: 0;
+  min-width: 36px;
 }
 
 .hero__swiper-pagination-bullet {
@@ -260,6 +261,10 @@
     height: 24px;
   }
 
+  .swiper-horizontal > .swiper-pagination-bullets .hero__swiper-pagination-bullet {
+    min-width: 40px;
+  }
+
   .hero__swiper-pagination-bullet {
     width: 40px;
     height: 40px;
@@ -353,7 +358,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     height: 44px;
     padding: 0 20px 0 0;
     right: 0;
