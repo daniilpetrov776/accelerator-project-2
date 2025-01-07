@@ -1,12 +1,36 @@
 .training {
   min-height: 946px;
+  padding: 36px 0 20px;
 }
 
 .training__wrapper {
   display: flex;
   flex-flow: wrap;
   align-items: flex-start;
-  gap: 25px
+  gap: 25px;
+}
+
+.training__header-title {
+  margin: 0;
+  position: relative;
+  top: 3px;
+
+  @include apply-styles($mobile-h3);
+}
+
+.training__title {
+  margin: 0;
+
+  &::before {
+    top: -16px;
+  }
+}
+
+.training__heading-wrapper {
+  gap: 35px;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
 }
 
 .training__swiper {
@@ -14,13 +38,9 @@
   overflow: hidden;
 }
 
-.training-header__title {
-  @include apply-styles($mobile-h3)
-}
-
-
-.training__text-wrapper p{
+.training__text-wrapper p {
   @include apply-styles($mobile-text-regular);
+
   width: 290px;
   margin: 0;
 }
@@ -32,39 +52,43 @@
 @media #{$not-mobile} {
   .training {
     min-height: 1050px;
+    padding: 60px 0 40px;
   }
 
   .training__swiper {
     width: 678px;
   }
 
+  .training__training-header {
+    align-items: flex-start;
+  }
 
   .training__heading-wrapper {
     width: 100%;
-    display: flex;
-    flex-flow: wrap;
-    align-items: flex-start;
+
     gap: 26px;
   }
 
-  .training-header__title {
-    @include apply-styles($tablet-h3)
+  .training__header-title {
+    @include apply-styles($tablet-h3);
+
+    min-height: 35px;
+    margin: 0 0 5px;
   }
 
 
-  .training__text-wrapper p{
+  .training__text-wrapper p {
+    position: relative;
+    top: -2px;
+
     @include apply-styles($tablet-text-regular);
+
     width: 100%;
     text-align: left;
   }
 
   .training__text-wrapper br {
     display: block;
-  }
-
-  .training__training-header {
-    min-height: 35px;
-    margin: 0 0 5px 0;
   }
 }
 
@@ -73,20 +97,39 @@
     min-height: 889px;
   }
 
-  .training__wrapper {
-    gap: 56px;
+  .training__title {
+    width: 100%;
   }
 
-  .training__text-wrapper p{
+  .training__wrapper {
+    gap: 20px;
+  }
+
+  .training__heading-wrapper {
+    gap: 37px;
+  }
+
+  .training__training-header {
+    align-items: flex-end;
+  }
+
+  .training__text-wrapper p {
+    width: 820px;
+
     @include apply-styles($desktop-text-regular);
   }
 
-  .training-header__title {
-    @include apply-styles($desktop-h3)
+  .training__text-wrapper br {
+    display: none;
+  }
+
+  .training__header-title {
+    @include apply-styles($desktop-h3);
+
+    margin: 36px 0 0;
   }
 
   .training__swiper {
     width: 1200px;
   }
-
 }

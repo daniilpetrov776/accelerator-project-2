@@ -1,11 +1,12 @@
 .button {
-  min-height: 56px;
   min-width: 180px;
   max-width: 290px;
   padding: 19px;
   background-color: $additional;
   border: solid 1px transparent;
+
   @include apply-styles($desktop-button-input-regular);
+
   color: $white;
   cursor: pointer;
   transition: background 0.3s $smooth, color 0.3s $smooth, border 0.3s $smooth;

@@ -13,6 +13,16 @@
   min-height: 55px;
 }
 
+.tours__tours-header-title {
+  margin: 0;
+  position: relative;
+  top: 1px;
+
+  &::before {
+    top: -16px;
+  }
+}
+
 .tours__spiwer {
   width: 290px;
   height: 416px;
@@ -42,7 +52,7 @@
     width: 678px;
   }
 
-  .tours__tours-slide  {
+  .tours__tours-slide {
     width: 330px;
   }
 }
@@ -62,7 +72,7 @@
     width: 1200px;
   }
 
-  .tours__tours-slide  {
+  .tours__tours-slide {
     width: 380px;
   }
 }

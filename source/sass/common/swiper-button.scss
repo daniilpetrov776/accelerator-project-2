@@ -2,7 +2,7 @@
   all: unset;
   width: 35px;
   height: 33px;
-  background: #0266C1;
+  background: #0266c1;
   border: solid 1px transparent;
   position: relative;
   display: block;
@@ -10,12 +10,12 @@
   transition: border 0.3s $smooth, background 0.3s $smooth;
 
   &:hover {
-    border-color: #1C3374;
+    border-color: #1c3374;
     background: $white;
   }
 
   &:hover::after {
-    background: #1C3374;
+    background: #1c3374;
   }
 
   &:focus-visible {
@@ -24,7 +24,7 @@
   }
 
   &:focus-visible::after {
-    background: #1C3374;
+    background: #1c3374;
   }
 
   &:active {

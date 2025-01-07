@@ -20,19 +20,25 @@
   max-width: 542px;
 }
 
-.slider-header__title {
-  margin: 0;
-}
-
 @media #{$not-mobile} {
   .slider-header {
     align-items: flex-end;
     width: 100%;
+    max-width: 678px;
+  }
+
+  .slider-header--full-width {
+    max-width: 768px;
   }
 
   .slider-header__navigation {
     display: flex;
     justify-content: flex-end;
   }
+}
 
+@media #{$desktop-only} {
+  .slider-header {
+    max-width: 1200px;
+  }
 }

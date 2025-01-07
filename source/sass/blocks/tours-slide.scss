@@ -1,3 +1,7 @@
+.tours-slide {
+  background-color: #0266c1;
+}
+
 .tours-slide__picture-wrapper {
   position: absolute;
   z-index: -1;
@@ -9,7 +13,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 60%);
   }
 }
 
@@ -51,7 +55,7 @@
   align-items: center;
   justify-content: space-between;
   height: min-content;
-  gap: 5px;
+  gap: 12px 5px;
 }
 
 .tours-slide__location {
@@ -76,6 +80,7 @@
 
 .tours-slide__location-text {
   margin: 0;
+
   @include apply-styles($tablet-caption-medium);
 }
 
@@ -87,13 +92,17 @@
   align-items: center;
   flex-flow: wrap;
   gap: 14px;
-  max-width: 155px;
+  min-width: 155px;
+  justify-content: space-between;
 }
 
 .tours-slide__duration-item {
   min-width: 67px;
   padding: 4px 0 4px 32px;
+
+  // padding: 4px 0 4px 22px;
   @include apply-styles($tablet-caption-medium);
+
   position: relative;
 
   &::before {
@@ -118,6 +127,7 @@
 
 .tours__slide-title {
   @include apply-styles($desktop-h4);
+
   margin: 0;
   max-width: 250px;
   height: min-content;
@@ -130,7 +140,7 @@
   display: flex;
   flex-flow: wrap;
   align-items: flex-end;
-  margin: 16px 0 0 0;
+  margin: 16px 0 0;
   padding: 0;
   list-style-type: none;
   gap: 8px;
@@ -169,6 +179,7 @@
 
 .tours-slide__info-heading {
   margin: 0;
+
   @include apply-styles($tablet-caption-small);
 }
 
@@ -177,6 +188,7 @@
   display: flex;
   flex-flow: wrap;
   align-items: center;
+  gap: 1px;
 }
 
 .tours-slide__star {
@@ -203,9 +215,9 @@
 }
 
 .tours-slide__info-description {
-  margin: 7px 0 0 0;
   @include apply-styles($tablet-caption-big);
-  margin: 3px 0 0 0;
+
+  margin: 3px 0 0;
 }
 
 @media #{$not-mobile} {
@@ -216,7 +228,7 @@
   }
 
   .tours-slide__info-item {
-   max-width: min-content;
+    max-width: min-content;
   }
 
   .tours-slide__duration-list {

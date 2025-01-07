@@ -1,4 +1,4 @@
-import { isWideScreen, isMediumScreen } from './const';
+import { isWideScreen, isMediumScreen, HEADER_MENU_PADDING } from './const';
 const burgerButton = document.querySelector('.burger-button');
 const navMenu = document.querySelector('.header-nav');
 const navLinks = navMenu.querySelectorAll('.header-nav__link');
@@ -45,6 +45,11 @@ const removeOverlay = () => {
   hero.classList.remove('hero--menu-open');
 };
 
+const updateHeaderHeight = () => {
+  navMenu.style.maxHeight = `${navMenu.scrollHeight}px`;
+  updateHeaderOffset(navMenu.scrollHeight + HEADER_MENU_PADDING);
+};
+
 let overflowTimeout;
 
 const handleOverflowVisibility = () => {
@@ -73,8 +78,7 @@ const closeMenu = () => {
 const openMenu = () => {
   navMenu.classList.add('header-nav--is-open');
   navMenu.classList.remove('header-nav--is-closed');
-  navMenu.style.maxHeight = `${navMenu.scrollHeight}px`;
-  updateHeaderOffset(navMenu.scrollHeight - 1);
+  updateHeaderHeight();
   blockScroll();
   handleOverflowVisibility();
 };

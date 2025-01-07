@@ -1,36 +1,75 @@
 .main {
-  background-image: image-set(
-    "../../img/clouds/clouds-1-mobile@1x.webp" 1x,
-    "../../img/clouds/clouds-1-mobile@2x.webp" 2x,
-    "../../img/clouds/clouds-1-mobile@1x.png" 1x,
-    "../../img/clouds/clouds-1-mobile@2x.png" 2x,
-  );
+  background-image:
+    image-set(
+      "../../img/clouds/clouds-1-mobile@1x.webp" 1x,
+      "../../img/clouds/clouds-1-mobile@2x.webp" 2x,
+      "../../img/clouds/clouds-1-mobile@1x.png" 1x,
+      "../../img/clouds/clouds-1-mobile@2x.png" 2x,
+    );
   background-repeat: no-repeat;
-  background-position: right top 560px
+  background-position: right top 575px;
 }
 
 @media #{$not-mobile} {
   .main {
-    background-image: image-set(
-      "../../img/clouds/clouds-1-tablet@1x.webp" 1x,
-      "../../img/clouds/clouds-1-tablet@2x.webp" 2x,
-      "../../img/clouds/clouds-1-tablet@1x.png" 1x,
-      "../../img/clouds/clouds-1-tablet@2x.png" 2x,
-    );
-    background-repeat: no-repeat;
-    background-position: right top 900px
+    background-image:
+      image-set(
+        "../../img/clouds/clouds-4-tablet@1x.webp" 1x,
+        "../../img/clouds/clouds-4-tablet@2x.webp" 2x,
+        "../../img/clouds/clouds-4-tablet@1x.png" 1x,
+        "../../img/clouds/clouds-4-tablet@2x.png" 2x,
+      ),
+      image-set(
+        "../../img/clouds/clouds-3-tablet@1x.webp" 1x,
+        "../../img/clouds/clouds-3-tablet@2x.webp" 2x,
+        "../../img/clouds/clouds-3-tablet@1x.png" 1x,
+        "../../img/clouds/clouds-3-tablet@2x.png" 2x,
+      ),
+      image-set(
+        "../../img/clouds/clouds-2-tablet@1x.webp" 1x,
+        "../../img/clouds/clouds-2-tablet@2x.webp" 2x,
+        "../../img/clouds/clouds-2-tablet@1x.png" 1x,
+        "../../img/clouds/clouds-2-tablet@2x.png" 2x,
+      ),
+      image-set(
+        "../../img/clouds/clouds-1-tablet@1x.webp" 1x,
+        "../../img/clouds/clouds-1-tablet@2x.webp" 2x,
+        "../../img/clouds/clouds-1-tablet@1x.png" 1x,
+        "../../img/clouds/clouds-1-tablet@2x.png" 2x,
+      );
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: right top 4664px, left top 4165px, right top 2285px, right top 942px;
   }
 }
 
 @media #{$desktop-only} {
   .main {
-    background-image: image-set(
-      "../../img/clouds/clouds-1-desktop@1x.webp" 1x,
-      "../../img/clouds/clouds-1-desktop@2x.webp" 2x,
-      "../../img/clouds/clouds-1-desktop@1x.png" 1x,
-      "../../img/clouds/clouds-1-desktop@2x.png" 2x,
-    );
+    background-image:
+      image-set(
+        "../../img/clouds/clouds-4-desktop@1x.webp" 1x,
+        "../../img/clouds/clouds-4-desktop@2x.webp" 2x,
+        "../../img/clouds/clouds-4-desktop@1x.png" 1x,
+        "../../img/clouds/clouds-4-desktop@2x.png" 2x,
+      ),
+      image-set(
+        "../../img/clouds/clouds-3-desktop@1x.webp" 1x,
+        "../../img/clouds/clouds-3-desktop@2x.webp" 2x,
+        "../../img/clouds/clouds-3-desktop@1x.png" 1x,
+        "../../img/clouds/clouds-3-desktop@2x.png" 2x,
+      ),
+      image-set(
+        "../../img/clouds/clouds-2-desktop@1x.webp" 1x,
+        "../../img/clouds/clouds-2-desktop@2x.webp" 2x,
+        "../../img/clouds/clouds-2-desktop@1x.png" 1x,
+        "../../img/clouds/clouds-2-desktop@2x.png" 2x,
+      ),
+      image-set(
+        "../../img/clouds/clouds-1-desktop@1x.webp" 1x,
+        "../../img/clouds/clouds-1-desktop@2x.webp" 2x,
+        "../../img/clouds/clouds-1-desktop@1x.png" 1x,
+        "../../img/clouds/clouds-1-desktop@2x.png" 2x,
+      );
     background-repeat: no-repeat;
-    background-position: right top 570px
+    background-position: right top 3700px, left top 3515px, right top 2270px, right top 674px;
   }
 }
