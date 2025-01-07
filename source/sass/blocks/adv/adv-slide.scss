@@ -10,6 +10,9 @@
   padding: 82px 10px 18px 10px;
   background: $white;
 
+  outline: none;
+  pointer-events: none;
+
   position: relative;
   &::before {
     position: absolute;
