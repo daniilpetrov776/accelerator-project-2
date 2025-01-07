@@ -6,6 +6,7 @@
   border: solid 1px transparent;
 
   @include apply-styles($desktop-button-input-regular);
+  font-weight: 500;
 
   color: $white;
   cursor: pointer;

@@ -72,19 +72,6 @@
   height: 12px;
   margin: 0 0 0 6px;
   left: -2px;
-
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   width: 12px;
-  //   height: 12px;
-  //   left: 0;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   background: $primary;
-  //   mask: url("/__spritemap#sprite-arrow-right-view") center center no-repeat;
-  //   transition: background 0.3s $smooth;
-  // }
 }
 
 .full-width-link__content {
