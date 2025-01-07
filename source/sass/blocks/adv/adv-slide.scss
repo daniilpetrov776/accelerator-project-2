@@ -126,6 +126,8 @@
     height: 329px;
     padding: 123px 20px 38px 20px;
     min-height: 329px;
+    overflow-y: auto;
+    overflow-x: clip;
 
     &::before {
       width: 54px;
@@ -137,6 +139,24 @@
       top: calc(39px + (54px / 2));
     }
 
+  }
+
+  .adv-slide::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .adv-slide::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .adv-slide::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+
+  .adv-slide::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   .adv-slide__content-wrapper {

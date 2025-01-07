@@ -75,6 +75,7 @@
   .bottom__phone {
     display: block;
     color: $primary;
+    max-width: 200px;
 
     @include apply-styles($desktop-h6);
 
