@@ -69,6 +69,18 @@
   }
 }
 
+@media #{$tablet-only} {
+  .adv__swiper-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .adv__adv-slide:last-child:nth-child(odd) {
+    grid-column: span 2;
+    place-self: center;
+  }
+}
+
 @media #{$desktop-only} {
   .adv {
     min-height: 734px;
