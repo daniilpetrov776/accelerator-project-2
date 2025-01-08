@@ -25,6 +25,7 @@
   padding: 5px 0;
   color: $primary;
   text-decoration: none;
+  word-break: break-word;
 
   @include apply-styles($mobile-button-input-regular);
 

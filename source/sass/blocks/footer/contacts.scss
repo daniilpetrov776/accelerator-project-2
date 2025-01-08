@@ -40,6 +40,7 @@
 .contacts__content-wrapper {
   p {
     margin: 0;
+    word-break: break-word;
 
     @include apply-styles($mobile-text-regular);
   }
@@ -64,6 +65,7 @@
   padding: 0 100px 0 32px;
   position: relative;
   top: 1px;
+  word-break: break-word;
 
   &::before {
     position: absolute;
@@ -97,6 +99,7 @@
 .contacts__contacts-link {
   color: $primary;
   text-decoration: none;
+  word-break: break-word;
 
   @include apply-styles($mobile-text-regular);
 

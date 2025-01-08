@@ -4,8 +4,10 @@
   padding: 19px;
   background-color: $additional;
   border: solid 1px transparent;
+  word-break: break-word;
 
   @include apply-styles($desktop-button-input-regular);
+
   font-weight: 500;
 
   color: $white;

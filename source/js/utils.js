@@ -1,29 +1,4 @@
-// export const setCustomSlideMove = (swiperInstance, { nextEl, prevEl }) => {
-//   if (!swiperInstance || !nextEl || !prevEl) {
-//     return;
-//   }
-
-//   const nextButton = document.querySelector(nextEl);
-//   const prevButton = document.querySelector(prevEl);
-
-//   if (!nextButton || !prevButton) {
-//     return;
-//   }
-
-//   nextButton.addEventListener('click', () => {
-//     swiperInstance.slideNext(280, true);
-//     setTimeout(() => {
-//       swiperInstance.slideNext(280, true);
-//     }, 330);
-//   });
-
-//   prevButton.addEventListener('click', () => {
-//     swiperInstance.slidePrev(280, true);
-//     setTimeout(() => {
-//       swiperInstance.slidePrev(280, true);
-//     }, 330);
-//   });
-// };
+import { Screen } from './const';
 
 export const setCustomSlideMove = (swiperInstance, { nextEl, prevEl }) => {
   if (!swiperInstance || !nextEl || !prevEl) {
@@ -112,4 +87,30 @@ export const validatePhone = (phone) => {
   const phoneRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
 
   return phoneRegex.test(phone);
+};
+
+export const getBreakpoint = () => {
+  const width = window.innerWidth;
+  if (width < Screen.tablet) {
+    return 'mobile';
+  }
+
+  if (width > Screen.phone && width < Screen.desktop) {
+    return 'tablet';
+  } else if (width > Screen.desktop) {
+    return 'desktop';
+  }
+};
+
+export const validateInput = (input, validator, errorMessage) => {
+  input.classList.remove('form__input--invalid');
+  input.setCustomValidity('');
+
+  if (!validator(input.value)) {
+    input.classList.add('form__input--invalid');
+    input.setCustomValidity(errorMessage);
+    input.reportValidity();
+    return false;
+  }
+  return true;
 };

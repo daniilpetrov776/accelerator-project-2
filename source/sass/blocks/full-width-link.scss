@@ -76,6 +76,7 @@
 
 .full-width-link__content {
   position: relative;
+  word-break: break-word;
 
   &::before {
     position: absolute;
@@ -94,6 +95,7 @@
 @media #{$not-mobile} {
   .full-width-link__link {
     @include apply-styles($tablet-button-big);
+
     position: relative;
     left: -9px;
     top: 1px;

@@ -1,4 +1,4 @@
-import { calculateCursor, validateEmail, validatePhone } from './utils';
+import { calculateCursor, validateEmail, validatePhone, validateInput } from './utils';
 
 const formInputs = document.querySelectorAll('.form__input');
 const form = document.querySelector('.form__form-field');
@@ -38,20 +38,15 @@ const formSumbitHandler = (evt) => {
     }
   });
 
-  if (!validatePhone(phoneInput.value)) {
-    phoneInput.classList.add('form__input--invalid');
+  if (!validateInput(phoneInput, validatePhone, 'Пожалуйста, введите номер телефона в указанном формате: +7 (000)-000-00-00.')) {
     isFormValid = false;
-    phoneInput.setCustomValidity('Пожалуйста, введите номер телефона в указанном формате: +7 (000)-000-00-00.');
     if (!firstInvalidInput) {
       firstInvalidInput = phoneInput;
     }
   }
 
-  if (!validateEmail(emailInput.value)) {
-    emailInput.classList.add('form__input--invalid');
+  if (!validateInput(emailInput, validateEmail, 'Пожалуйста, заполните адрес почты в корректном формате.')) {
     isFormValid = false;
-    emailInput.setCustomValidity('Пожалуйста, заполните адрес почты в корректном формате.');
-    emailInput.reportValidity();
     if (!firstInvalidInput) {
       firstInvalidInput = emailInput;
     }
@@ -91,11 +86,13 @@ const handleInputEvent = (evt) => {
   }
 };
 
+const addInputListeners = (input, events, handler) => {
+  events.forEach((event) => input.addEventListener(event, handler));
+};
+
 const handleInputsChange = () => {
   formInputs.forEach((input) => {
-    input.addEventListener('input', handleInputEvent);
-    input.addEventListener('focus', handleInputEvent);
-    input.addEventListener('change', handleInputEvent);
+    addInputListeners(input, ['input', 'focus', 'change'], handleInputEvent);
   });
 };
 
@@ -180,10 +177,22 @@ const formatPhoneNumber = () => {
   });
 };
 
-export const handleFormValidation = () => {
+const setupSubmitHandler = () => {
   form.addEventListener('submit', formSumbitHandler);
+};
+
+const setupPhoneFormatting = () => {
+  formatPhoneNumber();
+};
+
+const attachFormListeners = () => {
   handleFormLabelVisibility();
   handleInputsChange();
-  formatPhoneNumber();
   clearFormFields();
+};
+
+export const handleFormValidation = () => {
+  setupSubmitHandler();
+  attachFormListeners();
+  setupPhoneFormatting();
 };

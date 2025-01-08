@@ -31,6 +31,7 @@
 .gallery__content-wrapper {
   p {
     margin: 0;
+    word-break: break-word;
 
     @include apply-styles($mobile-text-small);
 
