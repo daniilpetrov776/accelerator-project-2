@@ -147,6 +147,7 @@
 
 .form__input:focus ~ .form__label {
   opacity: 0;
+  pointer-events: none;
 }
 
 .form__submit-button {

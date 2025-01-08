@@ -5,7 +5,6 @@ const updateContentHeadingsShadow = () => {
   contentHeading.setAttribute('data-shadow', contentHeading.textContent);
 };
 
-
 export const updateHeadingsShadow = () => {
   updateContentHeadingsShadow();
   headings.forEach((heading) => {
