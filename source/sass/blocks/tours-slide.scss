@@ -80,6 +80,9 @@
 
 .tours-slide__location-text {
   margin: 0;
+  word-break: break-word;
+  width: max-content;
+  max-width: 48px;
 
   @include apply-styles($tablet-caption-medium);
 }
@@ -99,9 +102,8 @@
 .tours-slide__duration-item {
   min-width: 67px;
   padding: 4px 0 4px 32px;
-
-  // padding: 4px 0 4px 22px;
   @include apply-styles($tablet-caption-medium);
+  word-break: break-word;
 
   position: relative;
 
@@ -125,9 +127,9 @@
   }
 }
 
-.tours__slide-title {
+.tours-slide__title {
   @include apply-styles($desktop-h4);
-
+  word-break: break-word;
   margin: 0;
   max-width: 250px;
   height: min-content;
@@ -179,6 +181,7 @@
 
 .tours-slide__info-heading {
   margin: 0;
+  word-break: break-word;
 
   @include apply-styles($tablet-caption-small);
 }
@@ -216,6 +219,9 @@
 
 .tours-slide__info-description {
   @include apply-styles($tablet-caption-big);
+  word-break: break-word;
+  width: max-content;
+  max-width: 90px;
 
   margin: 3px 0 0;
 }
@@ -252,7 +258,6 @@
   }
 
   .tours-slide__info-list {
-    // column-gap: 52px;
     max-width: 340px;
   }
 }

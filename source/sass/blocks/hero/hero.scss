@@ -5,10 +5,6 @@
   transition: background 0.3s $smooth;
 }
 
-// .hero__picture--first {
-//   transform: translateZ(-1);
-// }
-
 .hero__overlay {
   position: absolute;
   top: 0;
@@ -43,11 +39,11 @@
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  padding: 0 0 100px 0;
+  padding: 0 0 100px;
 }
 
 .hero__slide-content-wrapper {
-  padding: 40px 15px 0 15px;
+  padding: 40px 15px 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -88,6 +84,7 @@
 
   b {
     display: block;
+    word-break: break-word;
 
     @include apply-styles($mobile-h2);
 
@@ -96,6 +93,7 @@
 
   p {
     margin: 0;
+    word-break: break-word;
 
     @include apply-styles($mobile-text-big);
   }
@@ -141,6 +139,7 @@
 .hero__slide-offer-content {
   margin: 0;
   line-height: 16px;
+  word-break: break-word;
 }
 
 .hero__swiper-pagination {

@@ -101,3 +101,16 @@ export const getBreakpoint = () => {
     return 'desktop';
   }
 };
+
+export const validateInput = (input, validator, errorMessage) => {
+  input.classList.remove('form__input--invalid');
+  input.setCustomValidity('');
+
+  if (!validator(input.value)) {
+    input.classList.add('form__input--invalid');
+    input.setCustomValidity(errorMessage);
+    input.reportValidity();
+    return false;
+  }
+  return true;
+};

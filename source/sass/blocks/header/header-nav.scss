@@ -48,6 +48,7 @@
 .header-nav__link {
   color: $white;
   text-decoration: none;
+  word-break: break-word;
 
   @include apply-styles($mobile-button-big);
 

@@ -47,8 +47,10 @@
 .header__phone {
   color: $white;
   text-decoration: none;
+  word-break: break-word;
 
   @include apply-styles($mobile-h6);
+
   font-weight: 600;
 
   margin: 0 5px 0 0;
@@ -113,6 +115,7 @@
     text-align: right;
 
     @include apply-styles($tablet-h6);
+
     font-weight: 600;
 
     margin: 0;
@@ -137,6 +140,7 @@
     text-align: right;
 
     @include apply-styles($desktop-h6);
+
     font-weight: 600;
 
     order: 2;

@@ -1,5 +1,6 @@
 .section-title {
   @include apply-styles($mobile-h3);
+  word-break: break-word;
 
   position: relative;
   min-width: 300px;
@@ -11,6 +12,7 @@
     height: 100%;
     color: $primary;
     opacity: 3%;
+    word-break: break-word;
 
     @include apply-styles($mobile-h2);
   }

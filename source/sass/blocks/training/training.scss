@@ -80,6 +80,7 @@
   .training__text-wrapper p {
     position: relative;
     top: -2px;
+    word-break: break-word;
 
     @include apply-styles($tablet-text-regular);
 

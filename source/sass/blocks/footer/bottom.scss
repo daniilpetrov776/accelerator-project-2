@@ -76,6 +76,7 @@
     display: block;
     color: $primary;
     max-width: 200px;
+    word-break: break-word;
 
     @include apply-styles($desktop-h6);
 

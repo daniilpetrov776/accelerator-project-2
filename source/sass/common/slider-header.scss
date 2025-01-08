@@ -18,6 +18,7 @@
 .slider-header__title-wrapper {
   width: 100%;
   max-width: 542px;
+  word-break: break-word;
 }
 
 @media #{$not-mobile} {
