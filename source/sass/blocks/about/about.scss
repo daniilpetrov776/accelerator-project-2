@@ -19,12 +19,14 @@
 
   h3 {
     @include apply-styles($mobile-h5);
+
     word-break: break-word;
     margin: 0;
   }
 
   p {
     @include apply-styles($mobile-text-regular);
+
     word-break: break-word;
     margin: 0;
   }
@@ -140,6 +142,7 @@
 
     h3 {
       @include apply-styles($desktop-h5);
+
       max-width: 582px;
     }
 
@@ -154,6 +157,7 @@
 
     p {
       @include apply-styles($desktop-text-small);
+
       max-width: 582px;
     }
   }

@@ -1,5 +1,6 @@
 .section-title {
   @include apply-styles($mobile-h3);
+
   word-break: break-word;
 
   position: relative;

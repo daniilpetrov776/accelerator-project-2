@@ -59,6 +59,7 @@
 
   h2 {
     @include apply-styles($mobile-h3);
+
     word-break: break-word;
 
     margin: 0;
@@ -67,6 +68,7 @@
 
   p {
     @include apply-styles($mobile-text-small);
+
     word-break: break-word;
     margin: 0 auto;
   }
@@ -143,7 +145,6 @@
   opacity: 0;
   color: $primary;
   word-break: break-word;
-
 }
 
 .form__input:focus::placeholder {

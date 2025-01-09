@@ -19,7 +19,9 @@
 
   h4 {
     @include apply-styles($h7);
+
     word-break: break-word;
+    width: max-content;
 
     max-width: 60%;
     margin: 0;
@@ -28,6 +30,7 @@
 
   p {
     @include apply-styles($text-xsmal);
+
     word-break: break-word;
     line-height: 16px;
     margin: 15px 0 0;
@@ -179,6 +182,6 @@
   }
 
   .training-slide__content-wrapper h4 {
-    max-width: 55%;
+    max-width: 150px;
   }
 }
