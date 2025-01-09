@@ -69,6 +69,7 @@
 
   h3 {
     @include apply-styles($mobile-h6);
+
     word-break: break-word;
 
     margin: 0;
@@ -78,6 +79,7 @@
 
   p {
     @include apply-styles($mobile-text-small);
+
     word-break: break-word;
 
     margin: 0;
